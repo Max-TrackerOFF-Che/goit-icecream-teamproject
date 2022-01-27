@@ -4,5 +4,6 @@
 @import '../sass/main/reset';
 // Переменные и брейкпоинты
 @import '../sass/utilities/mixins/respond';
-@import ' ../sass/utilities/variables';
-@import ' ../sass/utilities/breakpoints';
+@import '../sass/utilities/breakpoints';
+@import '../sass/utilities/mixins';
+@import '../sass/utilities/variables';
