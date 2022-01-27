@@ -7,3 +7,21 @@
 @import '../sass/utilities/breakpoints';
 @import '../sass/utilities/mixins';
 @import '../sass/utilities/variables';
+// Стили блоков страницы
+@import '../sass/layouts/site-header';
+@import '../sass/layouts/products';
+@import '../sass/layouts/about';
+@import '../sass/layouts/advantages';
+@import '../sass/layouts/gallery';
+@import '../sass/layouts/customer-reviews';
+@import '../sass/layouts/contacts';
+@import '../sass/layouts/site-footer';
+// Скелет страницы
+@import '../partials/site-header.html';
+@import '../partials/products.html';
+@import '../partials/about.html';
+@import '../partials/advantages.html';
+@import '../partials/gallery.html';
+@import '../partials/customer-reviews.html';
+@import '../partials/contacts.html';
+@import '../partials/site-footer.html';
