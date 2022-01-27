@@ -1,3 +1,7 @@
+body {
+  background-color: red;
+}
+
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
 Document
@@ -315,5 +319,13 @@ img {
   --hover-buttons-red: #d41342;
   --hover-buttons-grat: #ecebeb;
   --cubic-transition: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  margin-top: -1px;
 }
 /*# sourceMappingURL=main.css.map */
