@@ -1,12 +1,11 @@
-// Главные стили
-
-@import '../sass/main/normalize';
-@import '../sass/main/reset';
 // Переменные и брейкпоинты
+@import '../sass/utilities/variables';
 @import '../sass/utilities/mixins/respond';
 @import '../sass/utilities/breakpoints';
 @import '../sass/utilities/mixins';
-@import '../sass/utilities/variables';
+// Главные стили
+@import '../sass/main/normalize';
+@import '../sass/main/reset';
 // Стили блоков страницы
 @import '../sass/layouts/base';
 @import '../sass/layouts/site-header';

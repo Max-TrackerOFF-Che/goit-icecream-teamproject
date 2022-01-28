@@ -297,26 +297,6 @@ img {
   height: auto;
 }
 
-:root {
-  --background-white: #fff;
-  --background-pink: #ffb8ca;
-  --background-secondary-color: #fff5f6;
-  --text-black: #000;
-  --text-secondary: #907e82;
-  --text-pink: #ffa5ba;
-  --text-red: #d41443;
-  --background-one-color: #ffb8ca;
-  --background-two-color: #f0d1a5;
-  --background-three-color: #c2e297;
-  --cafe-text-color: #f0d1a5;
-  --social-icons-fill: #fea5bb;
-  --hover-social-icons-fill: #d41443;
-  --hover-social-icons-color: #fff;
-  --hover-buttons-red: #d41342;
-  --hover-buttons-grat: #ecebeb;
-  --cubic-transition: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .container {
   padding-left: 15px;
   padding-right: 15px;
