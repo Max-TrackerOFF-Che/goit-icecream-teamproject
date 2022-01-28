@@ -1,0 +1,77 @@
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.reviews-card {
+  text-align: center;
+  padding-top: 80px;
+  &__img {
+    margin: 0 auto;
+  }
+  &__wrapper {
+    margin-top: 29px;
+    background: #fafafa;
+    padding: 20px 50px 20px 50px;
+  }
+  &__comment {
+    position: relative;
+    font-family: 'DM Sans';
+    font-weight: 500;
+    font-size: 12px;
+    color: #000000;
+    line-height: 2.58;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-image: repeating-linear-gradient(
+      180deg,
+      transparent,
+      transparent 30px,
+      #e1e1e1 31px
+    );
+    z-index: 1;
+
+    &::before {
+      position: absolute;
+      content: '';
+      background-image: url(../images/sprite.svg#icon-quotes);
+      background-color: tomato;
+      width: 54px;
+      height: 40px;
+      top: -10px;
+      left: 15px;
+      z-index: -1;
+    }
+  }
+
+  &__marker {
+    margin-top: 30px;
+  }
+  &__icon {
+    width: 4px;
+    height: 4px;
+    fill: #c7133e;
+    margin-right: 10px;
+  }
+  &__customername {
+    margin-top: 18px;
+  }
+}
+
+.dots-style {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  & button {
+    background: #d9d9d9;
+    border: none;
+    border-radius: 50%;
+    font-size: 0;
+    height: 12px;
+    width: 12px;
+    margin-right: 18px;
+  }
+  & li[class='slick-active'] button {
+    background: #d31342;
+  }
+}
