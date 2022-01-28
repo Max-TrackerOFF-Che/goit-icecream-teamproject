@@ -1,0 +1,103 @@
+.advantages__hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  margin-top: -1px;
+}
+
+.advantages__list {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+
+  @media screen and (max-width: 767px) {
+    max-width: 450px;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+  }
+}
+
+.advantages__item {
+  margin-bottom: 30px;
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+    &:nth-child(2n) {
+      margin-left: 30px;
+    }
+    &:nth-child(n + 3) {
+      margin-bottom: 0;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    /*width: calc((100% - 8 * 15px) / 4);*/
+    width: 100%;
+    max-width: 270px;
+    margin-bottom: 0;
+
+    &:not(:first-child) {
+      margin-left: 30px;
+    }
+  }
+  /*.feature__list & + & {
+    @media screen and (min-width: 1200px) {
+        margin-left: 30px;
+        } 
+    }*/
+  .advantages__item::before {
+    display: block;
+    content: '';
+    width: 50px;
+    height: 50px;
+    margin-bottom: 30px;
+    background-image: url(../../images/adv-icon-one.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .advantages__item .icon-one::before {
+    background-image: url(../../images/adv-icon-one.png);
+  }
+  .advantages__item .icon-two::before {
+    background-image: url(../../images/adv-icon-two.png);
+  }
+  .advantages__item .icon-three::before {
+    background-image: url(../../images/adv-icon-three.png);
+  }
+  .advantages__item .icon-one:hover {
+    color: #000;
+  }
+  .advantages__subtitle {
+    margin-bottom: 10px;
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #d41443;
+
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
+  }
+  .advantages__text {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: #000000;
+  }
+}
