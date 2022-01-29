@@ -24,6 +24,19 @@
   @media screen and (min-width: 768px) {
     display: flex;
   }
+
+  &::after {
+    content: ' ';
+    background-size: contain;
+    background-image: url(../images/hero-elipse@1x.png);
+    width: 346px;
+    height: 346px;
+
+    position: absolute;
+    left: 36px;
+    bottom: 75px;
+    z-index: 1;
+  }
 }
 
 .header {
@@ -62,6 +75,7 @@
 
 .hero__title {
   font-family: Titan One;
+  font-weight: 400;
   font-size: 26px;
   line-height: 1.15;
   letter-spacing: 0.04em;
@@ -99,7 +113,7 @@
 .hero__title-section {
   display: flex;
   flex-direction: column;
-  z-index: 2;
+  z-index: 3;
 }
 
 .hero__amount-list {
@@ -118,6 +132,7 @@
     max-height: 410px;
     left: 117px;
     bottom: 0;
+    z-index: 2;
   }
 
   &--bio-eco {
