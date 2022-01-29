@@ -269,4 +269,18 @@
   .contacts__card-text {
     font-size: 16px;
   }
+  .contacts__icon-franchise{
+    fill: map-get($colors, text-red);
+  }
+  .contacts__icon-location {
+    fill: map-get($colors, background-white);
+  }
+  .contacts__button-location:hover,
+  .contacts__button-location:focus {
+background-color: map-get($colors, hover-buttons-red);
+  }
+  .contacts__button-franchise:hover,
+  .contacts__button-franchise:focus {
+    background-color: map-get($colors, hover-buttons-gray);
+  }
 }
