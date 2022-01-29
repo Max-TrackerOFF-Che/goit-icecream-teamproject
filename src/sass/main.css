@@ -329,4 +329,155 @@ img {
   opacity: 0;
   margin-top: -1px;
 }
+
+.action-button__icon {
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #ffb8ca;
+}
+
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ffb8ca;
+  height: 450px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.header {
+  padding-left: 20px;
+  padding-right: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__logo {
+  margin-top: 6px;
+}
+
+.header__menu-button {
+  width: 20px;
+  height: 12px;
+}
+
+.header__nav-container {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .header__nav-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.header__button {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .header__button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.hero__title {
+  font-family: Titan One;
+  font-size: 26px;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.hero__large-text {
+  font-size: 48px;
+  line-height: 0.95;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #d41443;
+}
+
+.hero__nav-button {
+  border-radius: 20px;
+  padding: 10px 20px;
+  border: none;
+  color: #d41443;
+  background-color: #fff;
+}
+
+.hero__nav-button--red {
+  color: #fff;
+  background-color: #d41443;
+  margin-right: 8px;
+}
+
+.hero__buttons-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 19px;
+}
+
+.hero__title-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.hero__amount-list {
+  display: none;
+}
+
+.hero__description {
+  display: none;
+}
+
+.hero__picture--icecream {
+  max-width: 171px;
+  max-height: 410px;
+  left: 117px;
+  bottom: 0;
+}
+
+.hero__picture--bio-eco {
+  display: none;
+}
+
+.hero__picture--tasty {
+  display: none;
+}
 /*# sourceMappingURL=main.css.map */
