@@ -1,6 +1,6 @@
-<header class="container header">
-    <a href="./index.html" class="header__logo">
-        <picture class="hero__picture hero__picture--bio-eco">
+<header class="container">
+    <div class="header"><a href="./index.html" class="header__logo">
+        <picture class="header__logo-picture">
             <source srcset="./images/ice-cream-logo.png 1x, ./images/ice-cream-logo@2x.png 2x">
             <img alt="логотип сайта" class="site-header__image" src="./images/ice-cream-logo.png">
         </picture>
@@ -27,55 +27,59 @@
             <use href="./images/sprite.svg#icon-cross"></use>
         </svg>
     </button>
+</div>
 </header>
 
 <main>
     <!-- HERO -->
-    <div class="container hero">
-        <div class="hero__title-section">
-            <h1 class="hero__title">ice cream made with <span class="hero__large-text">passion</span></h1>
-            <ul class="hero__buttons-list">
-                <li class="hero__buttons-list-item">
-                    <form style="display: inline" action="#products" method="get">
-                        <button class="hero__nav-button hero__nav-button--red">Products</button>
-                    </form>
+    <div class="container">
+        <div class="hero">
+            <div class="hero__title-section">
+                <h1 class="hero__title">ice cream <br> made with <br><span class="hero__large-text">passion</span></h1>
+                <ul class="hero__buttons-list">
+                    <li class="hero__buttons-list-item">
+                        <form style="display: inline" action="#products" method="get">
+                            <button class="hero__nav-button hero__nav-button--red">Products</button>
+                        </form>
+                    </li>
+                    <li class="hero__buttons-list-item">
+                        <form style="display: inline" action="#about" method="get">
+                            <button class="hero__nav-button">How it’s made?</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+            <ul class="hero__amount-list">
+                <li class="hero__amount-item">
+                    <p class="hero__number">16</p>
+                    <p class="hero__text">cafes</p>
                 </li>
-                <li class="hero__buttons-list-item">
-                    <form style="display: inline" action="#about" method="get">
-                        <button class="hero__nav-button">How it’s made?</button>
-                    </form>
+                <li class="hero__amount-item">
+                    <p class="hero__number">23</p>
+                    <p class="hero__text">food trucks</p>
                 </li>
             </ul>
+            <div class="hero__description">
+                <p class="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et</p>
+                <button type="button" class="hero__description-button">
+                    <svg class="hero__description-icon">
+                        <use href="./images/sprite.svg#icon-arrow-right"></use>
+                    </svg>
+                </button>
+            </div>
+            <picture class="hero__picture hero__picture--bio-eco">
+                <source srcset="./images/bio-eco@1x.png 1x, ./images/bio-eco@2x.png 2x">
+                <img alt="Кувшин с молоком" class="site-header__image" src="./images/bio-eco@1x.png">
+            </picture>
+            <picture class="hero__picture hero__picture--icecream">
+                <source srcset="./images/hero-icecream@1x.png 1x, ./images/hero-icecream@2x.png 2x"">
+                            <img alt=" мороженное" class="site-header__image" src="./images/hero-icecream@1x.png">
+            </picture>
+            <picture class="hero__picture hero__picture--tasty">
+                <source srcset="./images/tasty@1x.png 1x, ./images/tasty@2x.png 2x">
+                <img alt="девушка ест мороженное" class="site-header__image" src="./images/tasty@1x.png">
+            </picture>
+            </div>
         </div>
-        <ul class="hero__amount-list">
-            <li class="hero__amount-item">
-                <p class="hero__number">16</p>
-                <p class="hero__text">cafes</p>
-            </li>
-            <li class="hero__amount-item">
-                <p class="hero__number">23</p>
-                <p class="hero__text">food trucks</p>
-            </li>
-        </ul>
-        <div class="hero__description">
-            <p class="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
-            <button type="button" class="hero__description-button">
-                <svg class="hero__description-icon">
-                    <use href="./images/sprite.svg#icon-arrow-right"></use>
-                </svg>
-            </button>
-        </div>
-        <picture class="hero__picture hero__picture--bio-eco">
-            <source srcset="./images/bio-eco@1x.png 1x, ./images/bio-eco@2x.png 2x">
-            <img alt="Кувшин с молоком" class="site-header__image" src="./images/bio-eco@1x.png">
-        </picture>
-        <picture class="hero__picture hero__picture--icecream">
-            <source srcset="./images/hero-icecream@1x.png 1x, ./images/hero-icecream@2x.png 2x"">
-                <img alt=" мороженное" class="site-header__image" src="./images/hero-icecream@1x.png">
-        </picture>
-        <picture class="hero__picture hero__picture--tasty">
-            <source srcset="./images/tasty@1x.png 1x, ./images/tasty@2x.png 2x">
-            <img alt="девушка ест мороженное" class="site-header__image" src="./images/tasty@1x.png">
-        </picture>
-    </div>
 </main>
