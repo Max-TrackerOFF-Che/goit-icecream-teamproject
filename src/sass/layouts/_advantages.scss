@@ -1,15 +1,33 @@
-.advantages__list {
-  margin-left: 20px;
-  padding-left: 15px;
-  padding-right: 15px;
+.advantages {
+  background-color: #fff5f6;
+  padding-top: 39px;
+  padding-bottom: 97px;
 
   @media screen and (min-width: 768px) {
+    padding-top: 66px;
+    padding-bottom: 140px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 39px;
+  }
+}
+.advantages__list {
+  @media screen and (min-width: 768px) {
     display: flex;
-    margin-left: 36px;
+  }
+
+  .advantages__item {
+    @media screen and (min-width: 768px) {
+      margin-right: 60px;
+      width: calc(100% - 120px / 3);
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
   @media screen and (min-width: 1200px) {
-    display: flex;
-    margin-left: 115px;
+    width: calc(100% - 60px / 3);
   }
 }
 @media screen and (max-width: 767px) {
@@ -17,16 +35,7 @@
     margin-bottom: 30px;
   }
 }
-@media screen and (min-width: 768px) {
-  .advantages__item:not(:last-child) {
-    margin-right: 30px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .advantages__item:not(:last-child) {
-    margin-right: 60px;
-  }
-}
+
 .advantages__item.icon-one::before {
   display: block;
   content: '';
@@ -49,37 +58,36 @@
   background-image: url(../images/milk3.png);
 }
 .advantages__subtitle {
-  margin-bottom: 10px;
-  margin-top: 16px;
+  font-family: Titan One;
   font-size: 36px;
   font-weight: 700;
   line-height: 1.14;
-  text-transform: uppercase;
   color: #d41443;
+  margin-bottom: 10px;
+  margin-top: 16px;
 
   @media screen and (min-width: 768px) {
     font-size: 48px;
     margin-top: 36px;
+    margin-bottom: 13px;
   }
   @media screen and (min-width: 1200px) {
     font-size: 58px;
     margin-top: 40px;
+    margin-bottom: 15px;
   }
 }
 .advantages__text {
+  font-family: DM Sans;
   font-weight: 700;
   font-size: 12px;
   line-height: 1.7;
-  text-transform: uppercase;
   color: #000000;
-  max-width: 230px;
 
   @media screen and (min-width: 768px) {
     font-size: 14px;
-    max-width: 180px;
   }
   @media screen and (min-width: 1200px) {
     font-size: 16px;
-    max-width: 330px;
   }
 }
