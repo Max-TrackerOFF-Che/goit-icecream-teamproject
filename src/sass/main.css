@@ -380,6 +380,7 @@ img {
   font-size: 18px;
   line-height: 1.166;
   margin-bottom: 15px;
+  margin-bottom: 15px;
   color: #ffa5ba;
 }
 
@@ -446,20 +447,16 @@ img {
 @media screen and (max-width: 767px) {
   .products__card {
     max-width: 280px;
-  }
-  .products__card:not(:last-child) {
-    margin-bottom: 130px;
+    height: auto;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767px) {
   .products__card {
-    margin-left: 0;
-    margin-right: 0;
-    max-width: 220px;
+    max-width: 280px;
   }
-  .products__card:not(:first-child) {
-    margin-left: 20px;
+  .products__card:not(:last-child) {
+    margin-bottom: 130px;
   }
 }
 
@@ -490,7 +487,10 @@ img {
 
 @media screen and (min-width: 1280px) {
   .products__card.products__card--two {
-    width: 337px;
+    max-width: 335px;
+  }
+  .products__card.products__card--two:not(:last-child) {
+    margin-right: 24px;
   }
 }
 
@@ -553,55 +553,70 @@ img {
   }
 }
 
-.products__card--one::before {
+.products__card.products__card--one::before {
   background-image: url(../images/product-one320@1x.png);
 }
 
 @media screen and (min-width: 768px) {
-  .products__card--one::before {
+  .products__card.products__card--one::before {
     background-image: url(../images/product-one768@1x.png);
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .products__card--one::before {
+  .products__card.products__card--one::before {
     background-image: url(../images/product-one1280@1x.png);
   }
 }
 
-.products__card--two::before {
+.products__card.products__card--two::before {
   background-image: url(../images/product-two320@1x.png);
 }
 
 @media screen and (min-width: 768px) {
-  .products__card--two::before {
+  .products__card.products__card--two::before {
     background-image: url(../images/product-two768@1x.png);
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .products__card--two::before {
+  .products__card.products__card--two::before {
     background-image: url(../images/product-two1280@1x.png);
   }
 }
 
-.products__card--three::before {
+.products__card.products__card--three::before {
   background-image: url(../images/product-three320@1x.png);
 }
 
 @media screen and (min-width: 768px) {
-  .products__card--three::before {
+  .products__card.products__card--three::before {
     background-image: url(../images/product-three768@1x.png);
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .products__card--three::before {
+  .products__card.products__card--three::before {
     background-image: url(../images/product-three1280@1x.png);
   }
 }
 
-.products__card-link {
+.products__card.products__card--one::before, .products__card.products__card--two::before, .products__card.products__card--three::before {
+  display: block;
+  content: '';
+  width: 100%;
+  height: 100%;
+  max-width: 249px;
+  margin-bottom: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  top: -30%;
+  left: 8%;
+  max-height: 252px;
+}
+
+.products__card .products__card-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -614,18 +629,18 @@ img {
 }
 
 @media screen and (min-width: 767px) {
-  .products__card-link {
+  .products__card .products__card-link {
     margin-bottom: 40px;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .products__card-link {
+  .products__card .products__card-link {
     margin-bottom: 62px;
   }
 }
 
-.products__card-subtitle {
+.products__card .products__card-subtitle {
   font-family: Titan One, sans-serif;
   font-weight: 400;
   font-size: 20px;
@@ -637,20 +652,20 @@ img {
 }
 
 @media screen and (max-width: 1279px) {
-  .products__card-subtitle {
+  .products__card .products__card-subtitle {
     margin-bottom: 30px;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .products__card-subtitle {
+  .products__card .products__card-subtitle {
     font-size: 30px;
     line-height: 1.13;
     margin-bottom: 32px;
   }
 }
 
-.products__card-subtitle::after {
+.products__card .products__card-subtitle::after {
   content: '';
   display: inline-block;
   width: 100%;
@@ -662,12 +677,12 @@ img {
 }
 
 @media screen and (min-width: 1280px) {
-  .products__card-subtitle::after {
+  .products__card .products__card-subtitle::after {
     margin-top: 32px;
   }
 }
 
-.products__card-text {
+.products__card .products__card-text {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.52;
@@ -677,14 +692,14 @@ img {
 }
 
 @media screen and (max-width: 767px) {
-  .products__card-text {
+  .products__card .products__card-text {
     padding-left: 40px;
     padding-right: 40px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .products__card-text {
+  .products__card .products__card-text {
     line-height: 1.76;
     padding-left: 11px;
     padding-right: 11px;
@@ -692,36 +707,36 @@ img {
 }
 
 @media screen and (min-width: 1280px) {
-  .products__card-text {
+  .products__card .products__card-text {
     font-size: 16px;
     padding-left: 44px;
     padding-right: 44px;
   }
 }
 
-.products__card-button {
+.products__card .products__card-button {
   padding: 0;
 }
 
 @media screen and (max-width: 767px) {
-  .products__card-button {
+  .products__card .products__card-button {
     margin-bottom: 41px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .products__card-button {
+  .products__card .products__card-button {
     margin-bottom: 40px;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .products__card-button {
+  .products__card .products__card-button {
     margin-bottom: 50px;
   }
 }
 
-.products__card-button::after {
+.products__card .products__card-button::after {
   content: '';
   display: block;
   width: 40px;
@@ -733,6 +748,22 @@ img {
 
 .advantages {
   background-color: #fff5f6;
+}
+
+.advantages__container {
+  padding-bottom: 97px;
+}
+
+@media screen and (min-width: 768px) {
+  .advantages__container {
+    padding-bottom: 140px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .advantages__container {
+    padding-bottom: 139px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -747,7 +778,7 @@ img {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1280px) {
   .advantages__list {
     margin-right: 0px;
   }
@@ -886,7 +917,7 @@ img {
 }
 
 .advantages__subtitle {
-  font-family: Titan One;
+  font-family: Titan One, sans-serif;
   font-size: 36px;
   font-weight: 700;
   line-height: 1.14;
@@ -912,7 +943,6 @@ img {
 }
 
 .advantages__text {
-  font-family: DM Sans;
   font-weight: 700;
   font-size: 12px;
   line-height: 1.7;
