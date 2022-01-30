@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://Max-TrackerOFF-Che.github.io/goit-icecream-teamproject",
+  "homepage": "https://github.com/igorostap.github.io/goit-icecream-teamproject",
   "scripts": {
     "dev": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /goit-icecream-teamproject/"

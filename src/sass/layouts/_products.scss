@@ -1,5 +1,5 @@
 .products {
-  background-color: rgba(229, 229, 229, 0.1);
+  background-color: $background-white;
   padding-bottom: 112px;
   padding-top: 112px;
 }
@@ -25,7 +25,7 @@
 
   margin-bottom: 15px;
 
-  color: #ffa5ba;
+  color: $text-pink;
 
   @media screen and (min-width: 768px) {
     font-size: 26px;
@@ -50,7 +50,7 @@
   letter-spacing: 0.04em;
   text-align: center;
 
-  color: #d41443;
+  color: $text-red;
 
   @media screen and (min-width: 768px) {
     font-size: 48px;
@@ -92,32 +92,32 @@
     margin-right: 0;
     max-width: 220px;
     &:not(:first-child) {
-      margin-left: 24px;
+      margin-left: 20px;
     }
   }
   @media screen and (min-width: 1280px) {
     max-width: 335px;
     /*height: 525px;*/
-    /* &:not(:last-child) {
-            margin-right: 24px;
-        }*/
+    &:not(:first-child) {
+      margin-left: 24px;
+    }
   }
   &.one {
-    background-color: #ffb8ca;
+    background-color: $background-one-color;
     border-radius: 24px;
     @media screen and (min-width: 1280px) {
       width: 335px;
     }
   }
   &.two {
-    background-color: #f0d1a5;
+    background-color: $background-two-color;
     border-radius: 24px;
     @media screen and (min-width: 1280px) {
       width: 337px;
     }
   }
   &.three {
-    background-color: #c2e297;
+    background-color: $background-three-color;
     border-radius: 24px;
     @media screen and (min-width: 1280px) {
       width: 335px;
@@ -248,7 +248,7 @@
 
   margin-bottom: 30px;
 
-  color: #ffffff;
+  color: $background-white;
 
   @media screen and (max-width: 767px) {
     padding-left: 40px;
