@@ -1100,7 +1100,7 @@ img {
   z-index: 1;
   margin-top: 29px;
   padding: 43px 50px 20px 50px;
-  background: radial-gradient(circle, #f0d1a5 0%, #c2e297 48%, white 100%);
+  background: radial-gradient(circle, #ffe3e6 40%, white 100%);
 }
 
 @media screen and (min-width: 768px) {
@@ -1122,7 +1122,7 @@ img {
   z-index: -1;
   top: 28px;
   left: 61px;
-  fill: #e1e1e1;
+  fill: #d41443;
 }
 
 @media screen and (min-width: 768px) {
@@ -1144,7 +1144,7 @@ img {
   text-align: center;
   font-size: 12px;
   line-height: 2.55;
-  background-image: repeating-linear-gradient(180deg, transparent, transparent 29px, #e1e1e1 30px);
+  background-image: repeating-linear-gradient(180deg, transparent, transparent 29px, white 30px);
 }
 
 @media screen and (min-width: 768px) {
@@ -1303,7 +1303,6 @@ img {
   }
   .contacts__name {
     display: block;
-    width: 80px;
     background-color: #f0d1a5;
     color: #fff5f6;
     padding-right: 20px;
@@ -1454,7 +1453,6 @@ img {
   .contacts__name {
     display: block;
     margin-bottom: 30px;
-    width: 73px;
     height: 28px;
   }
   .contacts__name-color {
