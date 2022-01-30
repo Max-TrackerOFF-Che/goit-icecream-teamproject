@@ -52,43 +52,45 @@
         <!-- HERO -->
         <div class="container">
             <div class="hero">
-                <div class="hero__title-section">
-                    <h1 class="hero__title">ice cream <br> made with <br><span class="hero__large-text">passion</span></h1>
-                    <ul class="hero__buttons-list">
-                        <li class="hero__buttons-list-item">
-                            <form style="display: inline" action="#products" method="get">
-                                <button class="hero__nav-button hero__nav-button--red">Products</button>
-                            </form>
+                <div class="hero__container">
+                    <div class="hero__title-section">
+                        <h1 class="hero__title">ice cream <br> made with <br><span class="hero__large-text">passion</span></h1>
+                        <ul class="hero__buttons-list">
+                            <li class="hero__buttons-list-item">
+                                <form style="display: inline" action="#products" method="get">
+                                    <button class="hero__nav-button hero__nav-button--red">Products</button>
+                                </form>
+                            </li>
+                            <li class="hero__buttons-list-item">
+                                <form style="display: inline" action="#about" method="get">
+                                    <button class="hero__nav-button">How it’s made?</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="hero__amount-list">
+                        <li class="hero__amount-item">
+                            <p class="hero__number">16</p>
+                            <p class="hero__text">cafes</p>
                         </li>
-                        <li class="hero__buttons-list-item">
-                            <form style="display: inline" action="#about" method="get">
-                                <button class="hero__nav-button">How it’s made?</button>
-                            </form>
+                        <li class="hero__amount-item">
+                            <p class="hero__number">23</p>
+                            <p class="hero__text">food trucks</p>
                         </li>
                     </ul>
                 </div>
-                <ul class="hero__amount-list">
-                    <li class="hero__amount-item">
-                        <p class="hero__number">16</p>
-                        <p class="hero__text">cafes</p>
-                    </li>
-                    <li class="hero__amount-item">
-                        <p class="hero__number">23</p>
-                        <p class="hero__text">food trucks</p>
-                    </li>
-                </ul>
+                <picture class="hero__picture hero__picture--bio-eco">
+                    <source srcset="./images/bio-eco@1x.png 1x, ./images/bio-eco@2x.png 2x">
+                    <img alt="Кувшин с молоком" class="site-header__image" src="./images/bio-eco@1x.png">
+                </picture>
                 <div class="hero__description">
-                    <picture class="hero__picture hero__picture--bio-eco">
-                        <source srcset="./images/bio-eco@1x.png 1x, ./images/bio-eco@2x.png 2x">
-                        <img alt="Кувшин с молоком" class="site-header__image" src="./images/bio-eco@1x.png">
-                    </picture>
                     <p class="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         incididunt ut
                         labore et
                     </p>
                     <button type="button" class="hero__description-button">
-                        <svg class="hero__description-icon">
-                            <use href="./images/header+hero/arrow-right.png"></use>
+                        <svg class="hero__description-icon" width="18" height="18">
+                            <use href="./images/arrow-right@1x.png"></use>
                         </svg>
                     </button>
                 </div>
