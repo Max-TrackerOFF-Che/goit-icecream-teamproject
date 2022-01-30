@@ -299,7 +299,9 @@ img {
 }
 
 .container {
-  margin: auto;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -321,8 +323,8 @@ img {
 @media screen and (min-width: 1280px) {
   .container {
     max-width: 1200px;
-    padding-left: 112px;
-    padding-right: 112px;
+    padding-left: 75px;
+    padding-right: 75px;
   }
 }
 
