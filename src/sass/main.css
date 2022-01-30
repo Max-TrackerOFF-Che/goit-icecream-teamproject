@@ -313,16 +313,16 @@ img {
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
-    padding-left: 36px;
-    padding-right: 36px;
+    padding-left: 34px;
+    padding-right: 34px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .container {
     max-width: 1200px;
-    padding-left: 115px;
-    padding-right: 115px;
+    padding-left: 112px;
+    padding-right: 112px;
   }
 }
 
