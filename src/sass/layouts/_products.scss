@@ -1,3 +1,4 @@
+
 .products__container {
   background-color: $background-white;
   padding-top: 121px;
@@ -29,21 +30,22 @@
 
   margin-bottom: 15px;
 
-  margin-bottom: 15px;
 
-  color: #ffa5ba;
+    margin-bottom: 15px;
 
-  @media screen and (min-width: 768px) {
-    font-size: 26px;
-    line-height: 1.154;
-  }
+    color: #FFA5BA;
 
-  @media screen and (min-width: 1280px) {
-    font-size: 30px;
-    line-height: 1.133;
+    @media screen and (min-width: 768px) {
+        font-size: 26px;
+        line-height: 1.154;      
+    }
 
-    letter-spacing: 0.04em;
-  }
+    @media screen and (min-width: 1280px) {
+        font-size: 30px;
+        line-height: 1.133;
+        
+        letter-spacing: 0.04em;
+    }
 }
 
 .products__title {
@@ -85,16 +87,20 @@
 
   text-align: center;
   @media screen and (max-width: 767px) {
+
     max-width: 280px;
     height: auto;
+    
 
     @media screen and (max-width: 767px) {
-      max-width: 280px;
-
-      &:not(:last-child) {
-        margin-bottom: 130px;
-      }
+       max-width: 280px;
+      
+        
+        &:not(:last-child) {
+            margin-bottom: 130px;
+        }
     }
+
   }
   @media screen and (min-width: 1280px) {
     max-width: 335px;
@@ -116,12 +122,13 @@
     border-radius: 24px;
 
     @media screen and (min-width: 1280px) {
-      max-width: 335px;
-      /*height: 525px;*/
-      &:not(:last-child) {
-        margin-right: 24px;
-      }
+        max-width: 335px;
+        /*height: 525px;*/
+        &:not(:last-child) {
+            margin-right: 24px;
+        }
     }
+
   }
   &.products__card--three {
     background-color: $background-three-color;
@@ -169,148 +176,149 @@
       margin-top: -210px;
       margin-bottom: 38px;
       background-position-y: 90%;
+
     }
+}
+
+.products__card--one::before {
+  background-image: url(../images/product-one320@1x.png);
+  @media screen and (min-width: 768px) {
+    background-image: url(../images/product-one768@1x.png);
   }
-
-  .products__card--one::before {
-    background-image: url(../images/product-one320@1x.png);
-    @media screen and (min-width: 768px) {
-      background-image: url(./images/product-one768@1x.png);
-    }
-    @media screen and (min-width: 1280px) {
-      background-image: url(../images/product-one1280@1x.png);
-    }
-  }
-  .products__card--two::before {
-    background-image: url(../images/product-two320@1x.png);
-    @media screen and (min-width: 768px) {
-      background-image: url(../images/product-two768@1x.png);
-    }
-    @media screen and (min-width: 1280px) {
-      background-image: url(../images/product-two1280@1x.png);
-    }
-  }
-  .products__card--three::before {
-    background-image: url(../images/product-three320@1x.png);
-    @media screen and (min-width: 768px) {
-      background-image: url(../images/product-three768@1x.png);
-    }
-    @media screen and (min-width: 1280px) {
-      background-image: url(../images/product-three1280@1x.png);
-    }
-  }
-  .one,
-  .two,
-  .three {
-    &::before {
-      display: block;
-      content: '';
-      width: 100%;
-      height: 100%;
-      max-width: 249px;
-      margin-bottom: 30px;
-      background-repeat: no-repeat;
-      background-position: center;
-      position: relative;
-      top: -30%;
-      left: 8%;
-      max-height: 252px;
-    }
-  }
-
-  .products__card-link {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 30px;
-    @media screen and (min-width: 767px) {
-      margin-bottom: 40px;
-    }
-    @media screen and (min-width: 1280px) {
-      margin-bottom: 62px;
-    }
-  }
-
-  .products__card-subtitle {
-    font-family: Titan One, sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 1.15;
-    text-align: center;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-
-    color: $background-white;
-    @media screen and (max-width: 1279px) {
-      margin-bottom: 30px;
-    }
-    @media screen and (min-width: 1280px) {
-      font-size: 30px;
-      line-height: 1.13;
-
-      margin-bottom: 32px;
-    }
-  }
-
-  .products__card-subtitle::after {
-    content: '';
-    display: inline-block;
-    width: 100%;
-    height: 6px;
-    background-image: url(../images/point@1x.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-top: 30px;
-
-    @media screen and (min-width: 1280px) {
-      margin-top: 32px;
-    }
-  }
-
-  .products__card-text {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.52;
-    text-align: center;
-    letter-spacing: 0.04em;
-
-    color: $background-white;
-    @media screen and (max-width: 767px) {
-      padding-left: 40px;
-      padding-right: 40px;
-    }
-    @media screen and (min-width: 768px) {
-      line-height: 1.76;
-
-      padding-left: 11px;
-      padding-right: 11px;
-    }
-    @media screen and (min-width: 1280px) {
-      font-size: 16px;
-
-      padding-left: 44px;
-      padding-right: 44px;
-    }
-  }
-  .products__card-button {
-    padding: 0;
-    @media screen and (max-width: 767px) {
-      margin-bottom: 41px;
-    }
-    @media screen and (min-width: 768px) {
-      margin-bottom: 40px;
-    }
-    @media screen and (min-width: 1280px) {
-      margin-bottom: 50px;
-    }
-    &::after {
-      content: '';
-      display: block;
-      width: 40px;
-      height: 40px;
-      background-image: url(../images/arrow-right@1x.png);
-      background-repeat: no-repeat;
-      background-position: center;
-    }
+  @media screen and (min-width: 1280px) {
+    background-image: url(../images/product-one1280@1x.png);
   }
 }
+.products__card--two::before {
+  background-image: url(../images/product-two320@1x.png);
+  @media screen and (min-width: 768px) {
+    background-image: url(../images/product-two768@1x.png);
+  }
+  @media screen and (min-width: 1280px) {
+    background-image: url(../images/product-two1280@1x.png);
+  }
+}
+.products__card--three::before {
+  background-image: url(../images/product-three320@1x.png);
+  @media screen and (min-width: 768px) {
+    background-image: url(../images/product-three768@1x.png);
+  }
+  @media screen and (min-width: 1280px) {
+    background-image: url(../images/product-three1280@1x.png);
+  }
+
+}
+.one, .two, .three {
+    &::before {
+        display: block;
+        content: "";
+        width: 100%;
+        height: 100%;
+        max-width: 249px;
+        margin-bottom: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        top: -30%;
+        left: 8%;
+        max-height: 252px;
+    }
+}*/
+
+
+.products__card-link {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 30px;
+  @media screen and (min-width: 767px) {
+    margin-bottom: 40px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 62px;
+  }
+}
+
+.products__card-subtitle {
+  font-family: Titan One, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: $background-white;
+  @media screen and (max-width: 1279px) {
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 30px;
+    line-height: 1.13;
+
+    margin-bottom: 32px;
+  }
+}
+
+.products__card-subtitle::after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 6px;
+  background-image: url(../images/point@1x.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 30px;
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 32px;
+  }
+}
+
+.products__card-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.52;
+  text-align: center;
+  letter-spacing: 0.04em;
+
+  color: $background-white;
+  @media screen and (max-width: 767px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @media screen and (min-width: 768px) {
+    line-height: 1.76;
+
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+
+    padding-left: 44px;
+    padding-right: 44px;
+  }
+}
+.products__card-button {
+  padding: 0;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 41px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 40px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 50px;
+  }
+  &::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/arrow-right@1x.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
