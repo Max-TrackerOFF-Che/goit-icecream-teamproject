@@ -304,7 +304,7 @@ img {
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .container {
-    max-width: 480px;
+    max-width: 320px;
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -712,21 +712,6 @@ img {
 
 .advantages {
   background-color: #fff5f6;
-  padding-top: 39px;
-  padding-bottom: 97px;
-}
-
-@media screen and (min-width: 768px) {
-  .advantages {
-    padding-top: 66px;
-    padding-bottom: 140px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .advantages {
-    padding-top: 39px;
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -737,19 +722,15 @@ img {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .advantages__list .advantages__item {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .advantages__item:not(:last-child) {
     margin-right: 60px;
-    width: calc(100% - 120px / 3);
-  }
-  .advantages__list .advantages__item:last-child {
-    margin-right: 0;
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .advantages__list {
-    width: calc(100% - 60px / 3);
+@media screen and (min-width: 1280px) {
+  .advantages__item:not(:last-child) {
+    margin-right: 30px;
   }
 }
 
@@ -775,7 +756,7 @@ img {
           animation-iteration-count: infinite;
 }
 
-.advantages__item.icon-two::before {
+.icon-two::before {
   display: block;
   content: '';
   width: 50px;
@@ -791,7 +772,7 @@ img {
           animation-iteration-count: infinite;
 }
 
-.advantages__item.icon-three::before {
+.icon-three::before {
   display: block;
   content: '';
   width: 44px;
@@ -887,7 +868,7 @@ img {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .advantages__subtitle {
     font-size: 58px;
     margin-top: 40px;
@@ -900,7 +881,7 @@ img {
   font-weight: 700;
   font-size: 12px;
   line-height: 1.7;
-  color: #000000;
+  color: #000;
 }
 
 @media screen and (min-width: 768px) {
@@ -909,7 +890,7 @@ img {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .advantages__text {
     font-size: 16px;
   }

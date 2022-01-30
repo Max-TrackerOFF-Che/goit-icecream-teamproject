@@ -1,23 +1,12 @@
 .advantages {
   background-color: $background-secondary-color;
-  padding-top: 39px;
-  padding-bottom: 97px;
-
-  @media screen and (min-width: 768px) {
-    padding-top: 66px;
-    padding-bottom: 140px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    padding-top: 39px;
-  }
 }
 .advantages__list {
   @media screen and (min-width: 768px) {
     display: flex;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
   .advantages__item:not(:last-child) {
     margin-right: 60px;
   }
