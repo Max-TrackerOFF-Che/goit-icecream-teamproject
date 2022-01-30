@@ -1,8 +1,8 @@
 $(document).ready(function () {
   $('.single-item').slick({
     infinite: true,
-    autoplay: true,
-    autoplaySpeed: 2000,
+    autoplay: false,
+    autoplaySpeed: 5000,
     slidesToShow: 1,
     slidesToScroll: 1,
     dots: true,
