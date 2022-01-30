@@ -1,32 +1,48 @@
 .advantages {
   background-color: $background-secondary-color;
 }
+.advantages__container {
+  padding-bottom: 97px;
+  @media screen and (min-width: 768px) {
+    padding-bottom: 140px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-bottom: 139px;
+  }
+}
 .advantages__list {
   @media screen and (min-width: 768px) {
     display: flex;
+    justify-content: space-between;
+
+    margin-right: 40px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-right: 0px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .advantages__item:not(:last-child) {
-    margin-right: 60px;
+.advantages__item {
+  width: 230px;
+  @media screen and (min-width: 768px) {
+    width: 180px;
   }
-}
-@media screen and (min-width: 1280px) {
-  .advantages__item:not(:last-child) {
-    margin-right: 30px;
+  @media screen and (min-width: 1280px) {
+    width: 330px;
   }
 }
 @media screen and (max-width: 767px) {
   .advantages__item:not(:last-child) {
-    margin-bottom: 30px;
+    margin-bottom: 38px;
   }
 }
+
 .icon-one::before {
   display: block;
   content: '';
   width: 33px;
   height: 50px;
   background-image: url(../images/milk1.png);
+
   animation-name: wobble;
   animation-timing-function: ease;
   animation-duration: 3s;
@@ -38,6 +54,7 @@
   width: 50px;
   height: 50px;
   background-image: url(../images/milk2.png);
+
   animation-name: wobble;
   animation-timing-function: ease;
   animation-duration: 3s;
@@ -49,6 +66,7 @@
   width: 44px;
   height: 50px;
   background-image: url(../images/milk3.png);
+
   animation-name: wobble;
   animation-timing-function: ease;
   animation-duration: 3s;
@@ -78,32 +96,33 @@
   }
 }
 .advantages__subtitle {
-  font-family: Titan One;
+  font-family: Titan One, sans-serif;
   font-size: 36px;
   font-weight: 700;
   line-height: 1.14;
   color: $text-red;
+
   margin-bottom: 10px;
   margin-top: 16px;
-
   @media screen and (min-width: 768px) {
     font-size: 48px;
+
     margin-top: 36px;
     margin-bottom: 13px;
   }
   @media screen and (min-width: 1280px) {
     font-size: 58px;
+
     margin-top: 40px;
     margin-bottom: 15px;
   }
 }
 .advantages__text {
-  font-family: DM Sans;
   font-weight: 700;
   font-size: 12px;
   line-height: 1.7;
-  color: $text-black;
 
+  color: $text-black;
   @media screen and (min-width: 768px) {
     font-size: 14px;
   }
