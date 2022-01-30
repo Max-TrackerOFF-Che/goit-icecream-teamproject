@@ -300,13 +300,13 @@ img {
 
 .container {
   margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .container {
     max-width: 480px;
-    padding-left: 20px;
-    padding-right: 20px;
   }
 }
 
@@ -919,10 +919,6 @@ img {
   background-color: #fff5f6;
 }
 
-.footer__container {
-  border-bottom: 1px solid #e1e1e1;
-}
-
 @media screen and (min-width: 768px) {
   .footer__container {
     display: -webkit-box;
@@ -1136,5 +1132,9 @@ img {
     padding: 9px 387px 10px 387px;
     max-width: 1200px;
   }
+}
+
+.footer__thumb-licence {
+  border-top: 1px solid #e1e1e1;
 }
 /*# sourceMappingURL=main.css.map */

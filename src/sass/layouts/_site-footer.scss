@@ -2,7 +2,6 @@
   background-color: $background-secondary-color;
 }
 .footer__container {
-  border-bottom: 1px solid $border-color;
   @media screen and (min-width: 768px) {
     display: flex;
     justify-content: space-between;
@@ -158,4 +157,7 @@
     padding: 9px 387px 10px 387px;
     max-width: 1200px;
   }
+}
+.footer__thumb-licence {
+  border-top: 1px solid $border-color;
 }
