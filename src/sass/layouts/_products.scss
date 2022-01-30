@@ -1,345 +1,292 @@
 .products {
-    background-color: rgba(229, 229, 229, 0.1);
-    padding-bottom: 112px;
-    padding-top: 112px;
+  background-color: $background-white;
+  padding-bottom: 112px;
+  padding-top: 112px;
 }
 
 .products-wrapper {
-    margin-bottom: 144px;
+  margin-bottom: 144px;
 
-    @media screen and (min-width: 768px) {
-        margin-bottom: 150px;
-    }
-    @media screen and (min-width: 1280px) {
-        margin-bottom: 259px;
-    }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 150px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 259px;
+  }
 }
 .products-text {
-    font-family: Titan One;
-    font-style: normal;
-    font-weight: normal;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 18px;
-    line-height: 1.166;
+  font-family: Titan One;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 1.166;
 
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 
-    color: #FFA5BA;
+  color: $text-pink;
 
-    @media screen and (min-width: 768px) {
-        font-size: 26px;
-        line-height: 1.154;      
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 26px;
+    line-height: 1.154;
+  }
 
-    @media screen and (min-width: 1280px) {
-        font-size: 30px;
-        line-height: 1.133;
-        
-        letter-spacing: 0.04em;
-    }
+  @media screen and (min-width: 1280px) {
+    font-size: 30px;
+    line-height: 1.133;
+
+    letter-spacing: 0.04em;
+  }
 }
 .products-title {
-    font-family: Titan One;
-    font-style: normal;
-    font-weight: normal;
-    text-transform: uppercase;
+  font-family: Titan One;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: uppercase;
 
-    font-size: 34px;
-    line-height: 1.147;
-    letter-spacing: 0.04em;
-    text-align: center;
-    
-    color: #D41443;
+  font-size: 34px;
+  line-height: 1.147;
+  letter-spacing: 0.04em;
+  text-align: center;
 
-    @media screen and (min-width: 768px) {
-        font-size: 48px;
-        line-height: 1.145;        
-    }
+  color: $text-red;
 
-    @media screen and (min-width: 1280px) {
-        font-size: 58px;
-        line-height: 1.138;
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 48px;
+    line-height: 1.145;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 58px;
+    line-height: 1.138;
+  }
 }
 
 .products-menu {
-
-    @media screen and (min-width: 768px) {
-        display: flex;
-        width: 100%;
-        justify-content: center
-       
-    }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .products-menu__card {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 100%;
 
+  max-width: 280px;
+  height: auto;
+
+  @media screen and (max-width: 767px) {
     max-width: 280px;
-    height: auto;
-    
 
-    @media screen and (max-width: 767px) {
-       max-width: 280px;
-      
-        
-        &:not(:last-child) {
-            margin-bottom: 130px;
-        }
+    &:not(:last-child) {
+      margin-bottom: 130px;
     }
-    @media screen and (min-width: 768px) {
-        margin-left: 0;
-        margin-right: 0;
-        max-width: 220px;
-        &:not(:first-child) {
+  }
+  @media screen and (min-width: 768px) {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 220px;
+    &:not(:first-child) {
+      margin-left: 20px;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    max-width: 335px;
+    /*height: 525px;*/
+     &:not(:first-child) {
             margin-left: 24px;
         }
+  }
+  &.one {
+    background-color: $background-one-color;
+    border-radius: 24px;
+    @media screen and (min-width: 1280px) {
+      width: 335px;
+    }
+  }
+  &.two {
+    background-color: $background-two-color;
+    border-radius: 24px;
+    @media screen and (min-width: 1280px) {
+      width: 337px;
+    }
+  }
+  &.three {
+    background-color: $background-three-color;
+    border-radius: 24px;
+    @media screen and (min-width: 1280px) {
+      width: 335px;
+    }
+  }
+  &::before {
+    display: inline-block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    max-width: 249px;
+    height: 252px;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 98%;
+    margin-top: -120px;
+    margin-bottom: 30px;
+    margin-left: 16px;
+    margin-right: 16px;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      content: '';
+      max-width: 220px;
+      /*height: 233px;*/
+      margin-top: -130px;
+      margin-left: 0;
+      margin-right: 0;
+      background-position-y: 90%;
+      justify-content: center;
     }
     @media screen and (min-width: 1280px) {
-        max-width: 335px;
-        /*height: 525px;*/
-       /* &:not(:last-child) {
-            margin-right: 24px;
-        }*/
+      content: '';
+      max-width: 337px;
+      height: 335px;
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: -210px;
+      background-position-y: 90%;
     }
-    &.one {
-        background-color: #FFB8CA;
-        border-radius: 24px;
-        @media screen and (min-width: 1280px) {
-            width: 335px;
-        }
-    }
-    &.two {
-        background-color: #F0D1A5;;
-        border-radius: 24px;
-        @media screen and (min-width: 1280px) {
-            width: 337px;
-        }
-    }
-    &.three {
-        background-color: #C2E297;
-        border-radius: 24px;
-        @media screen and (min-width: 1280px) {
-            width: 335px;
-        }
-    }
-    &::before {
-        display: inline-block;
-        content: "";
-        width: 100%;
-        height: 100%;
-        max-width: 249px;
-        height: 252px;
-        background-repeat: no-repeat;
-        background-position-x: 50%;
-        background-position-y: 98%;
-        margin-top: -120px;
-        margin-bottom: 30px;
-        margin-left: 16px;
-        margin-right: 16px;
-
-        @media screen and (min-width: 768px) {
-            display: flex;
-            content: "";
-            max-width: 220px;
-            /*height: 233px;*/
-            margin-top: -130px;
-            margin-left: 0;
-            margin-right: 0;
-            background-position-y: 90%;
-            justify-content: center;
-        }
-        @media screen and (min-width: 1280px) {
-            
-            content: "";
-            max-width: 337px;
-            height: 335px;
-            margin-left: 0;
-            margin-right: 0;
-            margin-top: -210px;
-            background-position-y: 90%;
-        }
-        
-    }
+  }
 }
 .products-menu__card.one::before {
-    background-image: url(../images/product-one320@1x.png);
-    @media screen and (min-width: 768px) {
-        background-image: url(../images/product-one768@1x.png);
-    }
-    @media screen and (min-width: 1280px) {
-        background-image: url(../images/product-one1280@1x.png);
-    }
+  background-image: url(../images/product-one320@1x.png);
+  @media screen and (min-width: 768px) {
+    background-image: url(../images/product-one768@1x.png);
+  }
+  @media screen and (min-width: 1280px) {
+    background-image: url(../images/product-one1280@1x.png);
+  }
 }
 .products-menu__card.two::before {
-    background-image: url(../images/product-two320@1x.png);
-    @media screen and (min-width: 768px) {
-        background-image: url(../images/product-two768@1x.png);
-    }
-    @media screen and (min-width: 1280px) {
-        background-image: url(../images/product-two1280@1x.png);
-    }
+  background-image: url(../images/product-two320@1x.png);
+  @media screen and (min-width: 768px) {
+    background-image: url(../images/product-two768@1x.png);
+  }
+  @media screen and (min-width: 1280px) {
+    background-image: url(../images/product-two1280@1x.png);
+  }
 }
 .products-menu__card.three::before {
-    background-image: url(../images/product-three320@1x.png);
-    @media screen and (min-width: 768px) {
-        background-image: url(../images/product-three768@1x.png);
-    }
-    @media screen and (min-width: 1280px) {
-        background-image: url(../images/product-three1280@1x.png);
-    }
+  background-image: url(../images/product-three320@1x.png);
+  @media screen and (min-width: 768px) {
+    background-image: url(../images/product-three768@1x.png);
+  }
+  @media screen and (min-width: 1280px) {
+    background-image: url(../images/product-three1280@1x.png);
+  }
 }
-  /*  &.one {
-        background: #FFB8CA;
-        border-radius: 24px;
-    }
-        &.one::before {
-            background-image: url(../images/product-one320@1x.png);
-        }
-    &.two {
-        background: #F0D1A5;;
-        border-radius: 24px;
-    }
-        &.two::before {
-            background-image: url(../images/product-two320@1x.png);
-        }
-
-    &.three {
-        background: #C2E297;
-        border-radius: 24px;
-    }
-        &.three::before {
-            background-image: url(../images/product-three320@1x.png);
-        }
-}
-.one, .two, .three {
-    &::before {
-        display: block;
-        content: "";
-        width: 100%;
-        height: 100%;
-        max-width: 249px;
-        margin-bottom: 30px;
-        background-repeat: no-repeat;
-        background-position: center;
-        position: relative;
-        top: -30%;
-        left: 8%;
-        max-height: 252px;
-    }
-}*/
 
 .products-menu__details {
-    
-
-    @media screen and (min-width: 768px) {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        
-    }
-    @media screen and (min-width: 1280px) {
-        
-    }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  @media screen and (min-width: 1280px) {
+  }
 }
 
 .products-menu__subtitle {
-    font-family: Titan One;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 1.15;
+  font-family: Titan One;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.15;
 
-    text-align: center;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 
-    color: #FFFFFF;
-    
-    @media screen and (max-width: 1279px) {
-        margin-bottom: 30px;
-    }
-    @media screen and (min-width: 1280px) {
-        font-size: 30px;
-        line-height: 1.13;
-        margin-bottom: 32px;
-    }
+  color: $background-white;
 
+  @media screen and (max-width: 1279px) {
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 30px;
+    line-height: 1.13;
+    margin-bottom: 32px;
+  }
 }
 
 .products-menu__subtitle::after {
-    content: "";
-    display: inline-block;
-    width: 100%;
-    height: 6px;
-    background-image: url("../images/point@1x.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-top: 30px;
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 6px;
+  background-image: url('../images/point@1x.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 30px;
 
-    @media screen and (min-width: 1280px) {
-        margin-top: 38px;
-    }
+  @media screen and (min-width: 1280px) {
+    margin-top: 38px;
+  }
 }
 
 .products-menu__text {
-    
-    font-family: DM Sans;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.52;
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.52;
 
-    text-align: center;
-    letter-spacing: 0.04em;
+  text-align: center;
+  letter-spacing: 0.04em;
 
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 
-    color: #FFFFFF;
-    
-    @media screen and (max-width: 767px) {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-    @media screen and (min-width: 768px) {
-        line-height: 1.76;
-        margin-bottom: 40px;
-        padding-left: 11px;
-        padding-right: 11px;
-    }
-    @media screen and (min-width: 1280px) {
-        font-size: 16px;
-        margin-bottom: 62px;
-        padding-left: 44px;
-        padding-right: 44px;
-    }
+  color: $background-white;
+
+  @media screen and (max-width: 767px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @media screen and (min-width: 768px) {
+    line-height: 1.76;
+    margin-bottom: 40px;
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    margin-bottom: 62px;
+    padding-left: 44px;
+    padding-right: 44px;
+  }
 }
 
 .products-menu__details::after {
-        content: "";
-        display: inline-block;
-        width: 40px;
-        height: 40px;
-        background-image: url("../images/arrow-right@1x.png");
-        background-repeat: no-repeat;
-        background-position: center;
+  content: '';
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/arrow-right@1x.png');
+  background-repeat: no-repeat;
+  background-position: center;
 
-        @media screen and (max-width: 767px) {
-            margin-left: 120px;
-        margin-right: 120px; 
-        margin-bottom: 41px;
-        }
-        
+  @media screen and (max-width: 767px) {
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-bottom: 41px;
+  }
 
-        @media screen and (min-width: 768px) {
-            margin-bottom: 40px;
-        }
-        @media screen and (min-width: 1280px) {
-            margin-bottom: 50px;
-        }
-
+  @media screen and (min-width: 768px) {
+    margin-bottom: 40px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 50px;
+  }
 }
