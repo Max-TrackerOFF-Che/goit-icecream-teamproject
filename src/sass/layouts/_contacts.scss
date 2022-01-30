@@ -1,17 +1,6 @@
-<<<<<<< HEAD
-@media screen and (min-width:180px) {
-  .contacts {
-    background-image:
-      linear-gradient(to bottom,
-        #fff 4%,
-        #fff5f6 4%,
-      );
-=======
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 180px) {
   .contacts {
     background-image: linear-gradient(to bottom, #fff 4%, #fff5f6 4%);
->>>>>>> e6ded4cb203fae9531e60b485d62487b2d5a9ac3
-    font-family: DM Sans;
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
@@ -222,16 +211,8 @@
 
   .contacts {
     font-size: 14px;
-<<<<<<< HEAD
-    background-image: linear-gradient(to bottom,
-        #fff 10%,
-        #fff5f6 10%,
-      ),
-      url("./../images/content-backg.png");
-=======
     background-image: linear-gradient(to bottom, #fff 10%, #fff5f6 10%),
       url('./../images/content-backg.png');
->>>>>>> e6ded4cb203fae9531e60b485d62487b2d5a9ac3
     background-repeat: no-repeat;
     margin-left: auto;
     margin-right: auto;
@@ -242,30 +223,15 @@
   }
 }
 
-<<<<<<< HEAD
-@media screen and (min-width:1200px) {
-  .contacts {
-    max-width: 1280px;
-    background-image: url("./../images/content-backg.png"),
-      linear-gradient(to bottom,
-        #fff 10%,
-        #fff5f6 10%,
-      );
-=======
 @media screen and (min-width: 1200px) {
   .contacts {
     max-width: 1280px;
     background-image: url('./../images/content-backg.png'),
       linear-gradient(to bottom, #fff 10%, #fff5f6 10%);
->>>>>>> e6ded4cb203fae9531e60b485d62487b2d5a9ac3
     background-repeat: no-repeat;
     margin-left: auto;
     margin-right: auto;
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> e6ded4cb203fae9531e60b485d62487b2d5a9ac3
   .contacts__card {
     display: flex;
     flex-wrap: wrap;
@@ -294,14 +260,8 @@
   .contacts__card-text {
     font-size: 16px;
   }
-<<<<<<< HEAD
-
-  .contacts__icon-franchise {
-    fill: map-get($colors, text-red);
-=======
   .contacts__icon-franchise {
     fill: $text-red;
->>>>>>> e6ded4cb203fae9531e60b485d62487b2d5a9ac3
   }
 
   .contacts__icon-location {
@@ -310,11 +270,7 @@
 
   .contacts__button-location:hover,
   .contacts__button-location:focus {
-<<<<<<< HEAD
-    background-color: map-get($colors, hover-buttons-red);
-=======
     background-color: $hover-buttons-red;
->>>>>>> e6ded4cb203fae9531e60b485d62487b2d5a9ac3
   }
 
   .contacts__button-franchise:hover,
