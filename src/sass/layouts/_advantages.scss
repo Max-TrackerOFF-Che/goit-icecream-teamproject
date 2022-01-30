@@ -1,33 +1,19 @@
 .advantages {
-  background-color: #fff5f6;
-  padding-top: 39px;
-  padding-bottom: 97px;
-
-  @media screen and (min-width: 768px) {
-    padding-top: 66px;
-    padding-bottom: 140px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    padding-top: 39px;
-  }
+  background-color: $background-secondary-color;
 }
 .advantages__list {
   @media screen and (min-width: 768px) {
     display: flex;
   }
-
-  .advantages__item {
-    @media screen and (min-width: 768px) {
-      margin-right: 60px;
-      width: calc(100% - 120px / 3);
-      &:last-child {
-        margin-right: 0;
-      }
-    }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .advantages__item:not(:last-child) {
+    margin-right: 60px;
   }
-  @media screen and (min-width: 1200px) {
-    width: calc(100% - 60px / 3);
+}
+@media screen and (min-width: 1280px) {
+  .advantages__item:not(:last-child) {
+    margin-right: 30px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -35,7 +21,6 @@
     margin-bottom: 30px;
   }
 }
-
 .icon-one::before {
   display: block;
   content: '';
@@ -47,8 +32,7 @@
   animation-duration: 3s;
   animation-iteration-count: infinite;
 }
-
-.advantages__item.icon-two::before {
+.icon-two::before {
   display: block;
   content: '';
   width: 50px;
@@ -59,7 +43,7 @@
   animation-duration: 3s;
   animation-iteration-count: infinite;
 }
-.advantages__item.icon-three::before {
+.icon-three::before {
   display: block;
   content: '';
   width: 44px;
@@ -70,7 +54,6 @@
   animation-duration: 3s;
   animation-iteration-count: infinite;
 }
-
 @keyframes wobble {
   from {
     transform: translate3d(0, 0, 0);
@@ -99,7 +82,7 @@
   font-size: 36px;
   font-weight: 700;
   line-height: 1.14;
-  color: #d41443;
+  color: $text-red;
   margin-bottom: 10px;
   margin-top: 16px;
 
@@ -108,7 +91,7 @@
     margin-top: 36px;
     margin-bottom: 13px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     font-size: 58px;
     margin-top: 40px;
     margin-bottom: 15px;
@@ -119,12 +102,12 @@
   font-weight: 700;
   font-size: 12px;
   line-height: 1.7;
-  color: #000000;
+  color: $text-black;
 
   @media screen and (min-width: 768px) {
     font-size: 14px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     font-size: 16px;
   }
 }
