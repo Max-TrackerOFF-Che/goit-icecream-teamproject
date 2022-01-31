@@ -646,3 +646,269 @@
     display: flex;
   }
 }
+
+// МОДАЛЬНОЕ ОКНО
+
+.backdrop {
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  padding-left: 15px;
+  padding-right: 15px;
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.modal {
+  z-index: 6;
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: #fff;
+  max-width: 450px;
+  width: 100%;
+  max-height: 609px;
+  height: 100%;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+
+  @media screen and (max-width: 1199px) {
+    overflow-y: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 528px;
+    max-height: 581px;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.5;
+    color: red;
+
+    margin-bottom: 12px;
+
+    @media screen and (min-width: 1200px) {
+      line-height: 1.15;
+    }
+  }
+
+  &__input-container {
+    position: relative;
+    margin-bottom: 10px;
+    margin-top: 4px;
+  }
+
+  &__form {
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__label {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+  }
+
+  &__action-button {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.modal__icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+
+  width: 18px;
+  height: 18px;
+  fill: red;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .modal__input:focus + & {
+    fill: black;
+  }
+}
+
+.modal__input {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 12px 42px;
+  // max-width: 370px;
+  width: 100%;
+  outline: none;
+
+  font-size: 14px;
+  line-height: 1.12;
+  letter-spacing: 0.01em;
+  color: red;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus {
+    border-color: black;
+  }
+}
+
+.modal__textarea {
+  resize: none;
+  height: 120px;
+  margin-top: 4px;
+  margin-bottom: 20px;
+  padding: 12px 16px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+
+  font-size: 14px;
+  line-height: 1.12;
+  letter-spacing: 0.01em;
+  color: red;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus {
+    border-color: black;
+  }
+
+  &::placeholder {
+    font-family: Titan One;
+    font-size: 14px;
+    line-height: 1.12;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.conditions {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  &__checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  &__text {
+    margin-left: 5px;
+    font-size: 12px;
+    line-height: 1.16;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: 1.71;
+    }
+  }
+}
+
+.conditions__check {
+  width: 16px;
+  height: 15px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .conditions__checkbox:checked ~ & {
+    opacity: 1;
+  }
+  @media screen and (min-width: 1200px) {
+    left: 12px;
+  }
+}
+
+.conditions__notcheck {
+  width: 16px;
+  height: 15px;
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .conditions__checkbox:checked + & {
+    opacity: 0;
+  }
+}
+
+.conditions__link {
+  display: inline-block;
+  color: black;
+  margin-left: 3px;
+  font-size: 12px;
+  line-height: 1.16;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: black;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
+
+.closer-button__image {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  fill: #000;
+
+  .closer-button:hover &,
+  .closer-button:focus & {
+    fill: red;
+  }
+}
+
+.closer-button {
+  padding: 0;
+
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
+}
