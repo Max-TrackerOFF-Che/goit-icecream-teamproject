@@ -340,107 +340,151 @@
 
   @media screen and (min-width: 768px) {
     display: flex;
-    flex-direction: column;
-    max-width: 120px;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    width: 120px;
+    height: 60px;
     margin-left: 110px;
     margin-top: 20px;
   }
 
   @media screen and (min-width: 1200px) {
-    max-width: 210px;
+    width: 210px;
+    height: 120px;
     margin-left: 140px;
     margin-top: 40px;
   }
 }
 
-.hero__description-button {
-  border: 0;
-  padding: 0;
-  max-width: 18px;
-  max-height: 18px;
-  margin-top: 7px;
+.hero__description-text-box {
+  position: relative;
+  overflow: hidden;
+  height: 35px;
 
   @media screen and (min-width: 1200px) {
-    max-width: 26px;
-    max-height: 26px;
+    height: 74px;
+  }
+}
+
+.hero__description-text {
+  position: absolute;
+  left: 0;
+  top: 100%;
+
+  transition: transform $transition-options;
+}
+
+.hero__description-button {
+  z-index: 2;
+  position: relative;
+  border: 0;
+  padding: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 7px;
+  background-color: $background-white;
+  border-radius: 50%;
+
+  transition: transform $transition-options;
+
+  &:focus ~ .hero__description-text-box .hero__description-text {
+    transform: translateY(-100%);
+  }
+
+  &:focus {
+    transform: rotate(-90deg);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 26px;
+    height: 26px;
     margin-top: 20px;
+
+    &:focus ~ .hero__description-text {
+      transform: translateY(-100%);
+    }
   }
 }
 
 .hero__description-icon {
   display: block;
-  background-size: cover;
-  max-width: 18px;
-  max-height: 18px;
+  max-width: 8px;
+  max-height: 8px;
+  fill: $color-button;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   @media screen and (min-width: 1200px) {
-    max-width: 26px;
-    max-height: 26px;
+    max-width: 12px;
+    max-height: 12px;
   }
 }
 
 .hero__picture {
   position: absolute;
+}
 
-  &--icecream {
-    max-width: 171px;
-    max-height: 410px;
-    left: 117px;
+.hero__picture--icecream {
+  max-width: 171px;
+  max-height: 410px;
+  left: 117px;
+  bottom: 0;
+  z-index: 2;
+
+  @media screen and (min-width: 768px) {
+    max-width: 143px;
+    max-height: 336px;
+    left: 370px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 236px;
+    max-height: 557px;
+    left: 539px;
+  }
+}
+
+.hero__picture--bio-eco {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    max-width: 124px;
+    max-height: 126px;
+
+    left: 34px;
+    bottom: 28px;
+    z-index: 2;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 188px;
+    max-height: 191px;
+    left: 77px;
+    bottom: 45px;
+  }
+}
+
+.hero__picture--tasty {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    max-width: 168px;
+    max-height: 133px;
+
+    right: 34px;
     bottom: 0;
     z-index: 2;
-
-    @media screen and (min-width: 768px) {
-      max-width: 143px;
-      max-height: 336px;
-      left: 370px;
-    }
-
-    @media screen and (min-width: 1200px) {
-      max-width: 236px;
-      max-height: 557px;
-      left: 539px;
-    }
   }
 
-  &--bio-eco {
-    display: none;
-
-    @media screen and (min-width: 768px) {
-      display: block;
-      max-width: 124px;
-      max-height: 126px;
-
-      left: 34px;
-      bottom: 28px;
-      z-index: 2;
-    }
-
-    @media screen and (min-width: 1200px) {
-      max-width: 188px;
-      max-height: 191px;
-      left: 77px;
-      bottom: 45px;
-    }
-  }
-
-  &--tasty {
-    display: none;
-
-    @media screen and (min-width: 768px) {
-      display: block;
-      max-width: 168px;
-      max-height: 133px;
-
-      right: 34px;
-      bottom: 0;
-      z-index: 2;
-    }
-
-    @media screen and (min-width: 1200px) {
-      max-width: 293px;
-      max-height: 232px;
-      right: 70px;
-    }
+  @media screen and (min-width: 1200px) {
+    max-width: 293px;
+    max-height: 232px;
+    right: 70px;
   }
 }
 
@@ -459,7 +503,8 @@
   }
 }
 
-.hero__text {
+.hero__text,
+.hero__description-text {
   font-size: 8px;
   line-height: 1.25;
 
@@ -563,7 +608,7 @@
     left: -150%;
     top: 0;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: $background-mobile-menu-color;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
