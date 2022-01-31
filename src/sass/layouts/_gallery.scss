@@ -1,0 +1,134 @@
+@media screen and (min-width: 320px) {
+  .gallery__img {
+    max-width: 1199px;
+    width: 100vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .gallery__section1,
+  .gallery__section2,
+  .gallery__section3 {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .gallery__img {
+    display: none;
+  }
+
+  .gallery {
+    width: 1200px;
+    height: 430px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(to bottom, #fff5f6 40%, #fff 40%);
+  }
+
+  section {
+    position: relative;
+  }
+
+  .gallery img {
+    display: block;
+    width: 160px;
+    height: 160px;
+    border-radius: 10%;
+    transform: scale(1);
+    transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .gallery__section1,
+  .gallery__section2,
+  .gallery__section3 {
+    display: flex;
+
+    height: 160px;
+  }
+
+  .gallery__section1 {
+    justify-content: center;
+  }
+
+  .gallery__section2 {
+    justify-content: space-between;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .gallery__section3 {
+    justify-content: center;
+  }
+
+  .gallery__image2 {
+    width: 320px;
+    height: 320px;
+  }
+
+  .gallery__image9 {
+    width: 320px;
+    height: 320px;
+    margin-top: -160px;
+  }
+
+  .gallery__image1:hover,
+  .gallery__image1:focus {
+    transform: scale(1.25);
+    z-index: 999;
+  }
+
+  .gallery__image2:hover,
+  .gallery__image2:focus {
+    transform: scale(1.25);
+    z-index: 999;
+  }
+
+  .gallery__image3:hover,
+  .gallery__image3:focus {
+    transform: scale(1.25);
+    z-index: 999;
+  }
+
+  .gallery__image4:hover,
+  .gallery__image4:focus {
+    transform: scale(1.25);
+    z-index: 999;
+  }
+
+  .gallery__image5:hover,
+  .gallery__image5:focus {
+    transform: scale(1.25);
+    z-index: 999;
+  }
+
+  .gallery__image6:hover,
+  .gallery__image6:focus {
+    transform: scale(1.25);
+    z-index: 999;
+  }
+
+  .gallery__image7:hover,
+  .gallery__image7:focus {
+    transform: scale(1.25);
+    z-index: 999;
+  }
+
+  .gallery__image8:hover,
+  .gallery__image8:focus {
+    transform: scale(1.25);
+    z-index: 999;
+  }
+
+  .gallery__image9:hover,
+  .gallery__image9:focus {
+    transform: scale(1.25);
+    z-index: 999;
+  }
+
+  .gallery__image10:hover,
+  .gallery__image10:focus {
+    transform: scale(1.25);
+    z-index: 999;
+  }
+}
