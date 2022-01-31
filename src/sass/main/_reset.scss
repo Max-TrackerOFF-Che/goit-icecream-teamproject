@@ -3,9 +3,9 @@
 }
 
 body {
-  color: $text-black;
-  background-color: $background-white;
-  font-family: DM Sans, sans-serif;
+  color: var(--primary-text-color);
+  background-color: var(--background-color);
+  font-family: 'DM Sans', sans-serif;
   font-size: 14px;
   letter-spacing: 0.03em;
 }
@@ -22,8 +22,7 @@ p {
   margin: 0;
   padding: 0;
 }
-a,
-a:active {
+a {
   text-decoration: none;
 }
 img {
