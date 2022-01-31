@@ -22,9 +22,9 @@
                             <li class="nav-list__item"><a class="nav-list__link" href="#products">Our products</a></li>
                             <li class="nav-list__item"><a class="nav-list__link" href="#contacts">Contact</a></li>
                         </ul>
-                    </nav>
+                    </nav> 
                 </div>
-                <button type="button" class="header__mob-button">
+                <button type="button" class="header__mob-button my-class2" data-modal-open2 >
                     Buy now
                     <svg class="header__mob-button-icon">
                         <use href="./images/header+hero/header-sprite.svg#pointer"></use>
@@ -37,7 +37,7 @@
                         <use href="./images/header+hero/header-sprite.svg#burger-menu" width="20" height="12"></use>
                     </svg>
                 </button>
-                <button type="button" class="header__mob-button header__mob-button--hidden">
+                <button type="button" class="header__mob-button header__mob-button--hidden" data-modal-open>
                     Buy now
                     <svg class="header__mob-button-icon">
                         <use href="./images/header+hero/header-sprite.svg#pointer"></use>
@@ -107,4 +107,53 @@
             </div>
         </div>
     </main>
+
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <h2 class="modal__title">Оставьте свои данные, мы вам перезвоним</h2>
+            <form class="modal__form">
+                <label for="person" class="modal__label">Имя</label>
+                <div class="modal__input-container">
+                    <input type="text" name="name" id="person" class="modal__input">
+                    <svg class="modal__icon">
+                        <use href="./images/header+hero/header-sprite.svg#person"></use>
+                    </svg>
+                </div>
+                <label for="phone" class="modal__label">Телефон</label>
+                <div class="modal__input-container">
+                    <input type="tel" name="phone" id="phone" class="modal__input">
+                    <svg class="modal__icon">
+                        <use href="./images/header+hero/header-sprite.svg#modal_phone"></use>
+                    </svg>
+                </div>
+                <label for="modal_email" class="modal__label">Почта</label>
+                <div class="modal__input-container">
+                    <input type="mail" name="mail" id="modal_email" class="modal__input">
+                    <svg class="modal__icon">
+                        <use href="./images/header+hero/header-sprite.svg#modal_email"></use>
+                    </svg>
+                </div>
+                <label for="comment" class="modal__label">Комментарий</label>
+                <textarea placeholder="Введите текст" id="comment" class="modal__textarea"></textarea>
+                <label class="conditions">
+                    <input type="checkbox" class="conditions__checkbox" name="conditions">
+                    <svg class="conditions__notcheck">
+                        <use href="./images/header+hero/header-sprite.svg#icon_notcheck"></use>
+                    </svg>
+                    <svg class="conditions__check">
+                        <use href="./images/header+hero/header-sprite.svg#icon_check"></use>
+                    </svg>
+                    <span class="conditions__text">Соглашаюсь с рассылкой и принимаю</span>
+                    <a href="" class="conditions__link">Условия договора</a>
+                </label>
+                <button type="submit" class="action-button modal__action-button">Отправить</button>
+            </form>
+            <button class="closer-button" type="button" data-modal-close>
+                <svg class="closer-button__image">
+                    <use href="./images/header+hero/header-sprite.svg#modal_close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    
 </div>
