@@ -36,11 +36,6 @@
     padding-right: 115px;
   }
 
-  &__logo-picture {
-    width: 199px;
-    height: 50px;
-  }
-
   &__menu-closer-button {
     width: 14px;
     height: 14px;
@@ -63,6 +58,11 @@
     height: 10px;
     fill: $color-button;
   }
+}
+
+.header__logo-picture {
+  width: 199px;
+  height: 50px;
 }
 
 .header__buttons {
@@ -381,66 +381,57 @@
 
 .hero__picture {
   position: absolute;
+}
+.hero__picture--icecream {
+  max-width: 171px;
+  max-height: 410px;
+  left: 117px;
+  bottom: 0;
+  z-index: 2;
+  @media screen and (min-width: 768px) {
+    max-width: 143px;
+    max-height: 336px;
+    left: 370px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 236px;
+    max-height: 557px;
+    left: 539px;
+  }
+}
 
-  &--icecream {
-    max-width: 171px;
-    max-height: 410px;
-    left: 117px;
+.hero__picture--bio-eco {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+    max-width: 124px;
+    max-height: 126px;
+    left: 34px;
+    bottom: 28px;
+    z-index: 2;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 188px;
+    max-height: 191px;
+    left: 77px;
+    bottom: 45px;
+  }
+}
+
+.hero__picture--tasty {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+    max-width: 168px;
+    max-height: 133px;
+    right: 34px;
     bottom: 0;
     z-index: 2;
-
-    @media screen and (min-width: 768px) {
-      max-width: 143px;
-      max-height: 336px;
-      left: 370px;
-    }
-
-    @media screen and (min-width: 1200px) {
-      max-width: 236px;
-      max-height: 557px;
-      left: 539px;
-    }
   }
-
-  &--bio-eco {
-    display: none;
-
-    @media screen and (min-width: 768px) {
-      display: block;
-      max-width: 124px;
-      max-height: 126px;
-
-      left: 34px;
-      bottom: 28px;
-      z-index: 2;
-    }
-
-    @media screen and (min-width: 1200px) {
-      max-width: 188px;
-      max-height: 191px;
-      left: 77px;
-      bottom: 45px;
-    }
-  }
-
-  &--tasty {
-    display: none;
-
-    @media screen and (min-width: 768px) {
-      display: block;
-      max-width: 168px;
-      max-height: 133px;
-
-      right: 34px;
-      bottom: 0;
-      z-index: 2;
-    }
-
-    @media screen and (min-width: 1200px) {
-      max-width: 293px;
-      max-height: 232px;
-      right: 70px;
-    }
+  @media screen and (min-width: 1200px) {
+    max-width: 293px;
+    max-height: 232px;
+    right: 70px;
   }
 }
 
