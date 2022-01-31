@@ -913,36 +913,35 @@
   }
 }
 
-// Новый вид кнопки
+// Новый вид кнопки и анимации
 .header__mob-button {
   transition: all 0.3s ease-in-out 0s;
   cursor: pointer;
   outline: none;
   position: relative;
-}
-.header__mob-button::before {
-  content: '';
-  border-radius: 22px;
-  width: 160px;
-  height: 44px;
-  border: 4px solid $text-red;
-  box-shadow: 0 0 10px $text-red;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: all 0.3s ease-in-out 0s;
+  &::before {
+    content: '';
+    border-radius: 22px;
+    width: 160px;
+    height: 44px;
+    border: 4px solid $text-red;
+    box-shadow: 0 0 10px $text-red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  &:hover,
+  &:focus {
+    color: $text-red;
+    transform: translateY(-6px);
+  }
 }
 
-.header__mob-button:hover,
-.header__mob-button:focus {
-  color: $text-red;
-  transform: translateY(-6px);
-}
-
-button:hover::before,
-button:focus::before {
+.header__mob-button:hover::before,
+.header__mob-button:focus::before {
   opacity: 1;
 }
 
@@ -957,7 +956,7 @@ button:focus::before {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: ring 1.5s infinite;
+  animation: ring 3s infinite;
 }
 
 .header__mob-button:hover::after,
@@ -978,3 +977,51 @@ button:focus::before {
     opacity: 0;
   }
 }
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.hero__picture--bio-eco {
+  animation: $slideInFromLeft;
+}
+.hero__description-button {
+  animation: $slideInFromLeft;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.hero__picture--tasty {
+  animation: $slideInFromRight;
+}
+.btn-animated {
+  animation: moveInBottom 2s ease-out;
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+// Две кнопки в хэддере
