@@ -1,8 +1,4 @@
-
 @media screen and (min-width: 320px) {
-  .gallery__gradient{
-    margin-bottom: 80px;
-  }
   .gallery__img {
     max-width: 1199px;
     width: 100vw;
@@ -16,15 +12,8 @@
     display: none;
   }
 }
-@media screen and (min-width: 768px){
-.gallery__gradient {
-  margin-bottom: 121px;
-}
-}
+
 @media screen and (min-width: 1200px) {
-  .gallery__gradient {
-    margin-bottom: 123px;
-  }
   .gallery__img {
     display: none;
   }
@@ -41,7 +30,7 @@
     position: relative;
   }
 
-  img {
+  .gallery img {
     display: block;
     width: 160px;
     height: 160px;
