@@ -1,4 +1,4 @@
-<section class="contacts">
+<section class="contacts" id="contacts">
     <div class="contacts__container">
         <ul class="contacts__head">
             <h2 hidden>Contacts</h2>
@@ -74,48 +74,60 @@
         </ul>
         <div class="contacts__button">
             <div class="about__box-btn">
-                <button type="button" class="about__bottom-btn btn btn-red btn-animate">
-                    Our locations
-                </button>
+                <a href="#openContacts-locations">
+                    <button type="button" class="about__bottom-btn btn btn-red btn-animate" data-modal-open>
+                        Our locations
+                    </button>
+                </a>
             </div>
             <div class="about__box-btn">
-                <a href="#openContacts-modal">
+                <a href="#openContacts-franchise">
                     <button type="button" class="about__bottom-btn btn btn-white btn-animate" data-modal-open>
                         Franchise
                     </button>
                 </a>
             </div>
         </div>
-        <div class="modal-window is-hidden" data-modal>
-            <div class="modal">
-                <button data-modal-close type="button" class="modal__close-button">
-                    <svg class="modal__icon-close" width="20" height="20">
-                        <use href="./images/sprite.svg#icon-home"></use>
-                    </svg>
-                </button>
-                <iframe class="maps"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5235.112469695876!2d28.428172577770678!3d49.22329718633418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472d5c6464c535ff%3A0x20b35776965a9523!2z0JzQtdCz0LDQvNC-0LvQuw!5e0!3m2!1sru!2sua!4v1643379002869!5m2!1sru!2sua"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </div>
-
-        <div id="openContacts-modal" class="contacts__modal">
-            <div class="contacts__modal-dialog">
-                <div class="contacts__modal-content">
-                    <div class="contacts__modal-header">
-                        <p class="contacts__modal-title">title</p>
-                        <a href="#close" title="Close" class="contacts__modal-button">
-                            <svg class="contacts__modal-cross" width=15 height=15>
+        <!-- Модалка франшизы -->
+        <div id="openContacts-locations" class="modal__locations">
+            <div class="about__modal-dialog">
+                <div class="about__modal-content">
+                    <div class="about__modal-header">
+                        <p class="about__modal-title">Ice Cream can be healthy?</p>
+                        <a href="#close" title="Close" class="about__modal-button">
+                            <svg class="about__modal-cross" width=15 height=15>
                                 <use href="./images/sprite.svg#icon-x">
                             </svg>
                         </a>
                     </div>
-                    <div class="contacts__modal-body">
-                        <p>Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus
-                            orci in imperdiet placerat.
-                            Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa
-                            nibh, tincidunt.
-                            Aliquam erat volutpat. Aenean accumsan.</p>
+                    <div class="about__modal-body">
+                        <p>Our ice cream and other products made from natural milk, so it's packed with important nutrients like
+                            calcium, phosphorus, B vitamins, potassium and vitamin D. Plus, it's an
+                            excellent source of protein. Drinking milk and dairy products may prevent osteoporosis and bone
+                            fractures and even help
+                            you maintain a healthy weight.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Модалка локейшенов -->
+        <div id="openContacts-franchise" class="modal__franchise">
+            <div class="about__modal-dialog">
+                <div class="about__modal-content">
+                    <div class="about__modal-header">
+                        <p class="about__modal-title">Ice Cream can be healthy?</p>
+                        <a href="#close" title="Close" class="about__modal-button">
+                            <svg class="about__modal-cross" width=15 height=15>
+                                <use href="./images/sprite.svg#icon-x">
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="about__modal-body">
+                        <p>Our ice cream and other products made from natural milk, so it's packed with important nutrients like
+                            calcium, phosphorus, B vitamins, potassium and vitamin D. Plus, it's an
+                            excellent source of protein. Drinking milk and dairy products may prevent osteoporosis and bone
+                            fractures and even help
+                            you maintain a healthy weight.</p>
                     </div>
                 </div>
             </div>

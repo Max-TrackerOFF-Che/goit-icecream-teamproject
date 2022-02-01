@@ -299,10 +299,9 @@
 
 .contacts__modal {
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  margin: 0 auto;
   background: rgba(0, 0, 0, 0.5);
   z-index: 1050;
   opacity: 0;
@@ -333,8 +332,9 @@
   position: relative;
 
   display: flex;
-
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
   background-color: $background-white;
   background-clip: padding-box;
   border: 1px solid $text-pink;
@@ -345,14 +345,6 @@
 
 .contacts__modal-header {
   display: flex;
-
-  align-items: center;
-
-  justify-content: space-between;
-  margin-top: 0;
-  margin-bottom: 0;
-
-  padding: 15px;
   border-bottom: 1px solid #eceeef;
 }
 .contacts__modal-title {
@@ -375,8 +367,6 @@
   }
 }
 .contacts__modal-button {
-  // float: right;
-  // display: block;
   text-align: center;
   padding-top: 4px;
   margin: 0;
