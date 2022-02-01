@@ -6,6 +6,7 @@
     font-size: 12px;
     line-height: 186%;
     padding-bottom: 113px;
+    margin-top: 86px;
   }
 
   .contacts__card {
@@ -153,126 +154,127 @@
     cursor: pointer;
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: $color-button;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .contacts__head {
-    display: flex;
-    justify-content: center;
   }
 
-  .contacts__card {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 220px;
-    max-height: 544px;
-    margin: 0;
-    padding: 50px 31px;
+  @media screen and (min-width: 768px) {
+    .contacts__head {
+      display: flex;
+      justify-content: center;
+    }
+
+    .contacts__card {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 220px;
+      max-height: 544px;
+      margin: 0;
+      padding: 50px 31px;
+    }
+
+    .contacts__card:not(:last-child) {
+      margin-bottom: 0;
+      margin-right: 20px;
+    }
+
+    .contacts__name {
+      display: block;
+      margin-bottom: 30px;
+      height: 28px;
+    }
+
+    .contacts__name-color {
+      width: 138px;
+    }
+
+    .contacts__button {
+      display: flex;
+      justify-content: center;
+      margin-top: 81px;
+    }
+
+    .contacts__button-location,
+    .contacts__button-franchise {
+      margin: 0;
+    }
+
+    .contacts__button-location {
+      width: 191px;
+      margin-right: 15px;
+    }
+
+    .contacts__button-franchise {
+      width: 174px;
+    }
+
+    .contacts {
+      font-size: 14px;
+      background-image: linear-gradient(to bottom, #fff 10%, #fff5f6 10%),
+        url('./../images/content-backg.png');
+      background-repeat: no-repeat;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 119px;
+    }
+
+    .contacts__card-text {
+      font-size: 14px;
+    }
   }
 
-  .contacts__card:not(:last-child) {
-    margin-bottom: 0;
-    margin-right: 20px;
-  }
+  @media screen and (min-width: 1200px) {
+    .contacts {
+      max-width: 1280px;
+      background-image: url('./../images/content-backg.png'),
+        linear-gradient(to bottom, #fff 10%, #fff5f6 10%);
+      background-repeat: no-repeat;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 132px;
+    }
+    .contacts__card {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 330px;
+      height: 572px;
+      padding: 51px 43px;
+      padding-bottom: 62px;
+    }
 
-  .contacts__name {
-    display: block;
-    margin-bottom: 30px;
-    height: 28px;
-  }
+    .contacts__name {
+      margin-bottom: 32px;
+    }
 
-  .contacts__name-color {
-    width: 138px;
-  }
+    .contacts__button-location {
+      width: 198px;
+    }
 
-  .contacts__button {
-    display: flex;
-    justify-content: center;
-    margin-top: 81px;
-  }
+    .contacts__button-franchise {
+      width: 180px;
+    }
 
-  .contacts__button-location,
-  .contacts__button-franchise {
-    margin: 0;
-  }
+    .contacts {
+      font-size: 16px;
+    }
 
-  .contacts__button-location {
-    width: 191px;
-    margin-right: 15px;
-  }
+    .contacts__card-text {
+      font-size: 16px;
+    }
+    .contacts__icon-franchise {
+      fill: $text-red;
+    }
 
-  .contacts__button-franchise {
-    width: 174px;
-  }
+    .contacts__icon-location {
+      fill: $background-white;
+    }
 
-  .contacts {
-    font-size: 14px;
-    background-image: linear-gradient(to bottom, #fff 10%, #fff5f6 10%),
-      url('./../images/content-backg.png');
-    background-repeat: no-repeat;
-    margin-left: auto;
-    margin-right: auto;
-  }
+    .contacts__button-location:hover,
+    .contacts__button-location:focus {
+      background-color: $hover-buttons-red;
+    }
 
-  .contacts__card-text {
-    font-size: 14px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .contacts {
-    max-width: 1280px;
-    background-image: url('./../images/content-backg.png'),
-      linear-gradient(to bottom, #fff 10%, #fff5f6 10%);
-    background-repeat: no-repeat;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .contacts__card {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 330px;
-    max-height: 572px;
-    padding: 51px 43px;
-    padding-bottom: 62px;
-  }
-
-  .contacts__name {
-    margin-bottom: 32px;
-  }
-
-  .contacts__button-location {
-    width: 198px;
-  }
-
-  .contacts__button-franchise {
-    width: 180px;
-  }
-
-  .contacts {
-    font-size: 16px;
-  }
-
-  .contacts__card-text {
-    font-size: 16px;
-  }
-  .contacts__icon-franchise {
-    fill: $text-red;
-  }
-
-  .contacts__icon-location {
-    fill: $background-white;
-  }
-
-  .contacts__button-location:hover,
-  .contacts__button-location:focus {
-    background-color: $hover-buttons-red;
-  }
-
-  .contacts__button-franchise:hover,
-  .contacts__button-franchise:focus {
-    background-color: $hover-buttons-gray;
+    .contacts__button-franchise:hover,
+    .contacts__button-franchise:focus {
+      background-color: $hover-buttons-gray;
+    }
   }
 }
