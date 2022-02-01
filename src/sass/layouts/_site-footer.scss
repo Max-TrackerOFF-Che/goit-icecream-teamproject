@@ -73,30 +73,10 @@
     margin-bottom: 50px;
   }
 }
-.footer__social-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-
-  background-color: $social-icons-fill;
-  color: $hover-social-icons-color;
-
-  transition: background-color $transition-options;
-  &:hover,
-  &:focus {
-    background-color: $text-red;
-  }
-  @media screen and (min-width: 768px) {
-    width: 34px;
-    height: 34px;
-  }
-  @media screen and (min-width: 1280px) {
-    width: 32px;
-    height: 32px;
-  }
+.footer__social-item {
+  display: inline-block;
+  position: relative;
+  font-size: 24px;
 }
 .footer__social-item:not(:last-child) {
   margin-right: 28px;
@@ -107,12 +87,56 @@
     margin-right: 24px;
   }
 }
+.footer__social-link {
+  color: $background-white;
+}
+.footer__social-link:before {
+  transform: scale(1);
+  content: '';
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  display: block;
+  background-color: $social-icons-fill;
+  color: $hover-social-icons-color;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-out;
+
+  @media screen and (min-width: 768px) {
+    width: 34px;
+    height: 34px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 32px;
+    height: 32px;
+  }
+}
+.footer__social-link:hover:before,
+.footer__social-link:focus:before {
+  transform: scale(0);
+  transition: all 0.3s ease-in;
+  color: $hover-social-icons-color;
+}
+
 .footer__icon {
   display: block;
   width: 20px;
   height: 20px;
 
   fill: currentColor;
+
+  position: absolute;
+  top: 6px;
+  left: 6px;
+
+  text-align: center;
+  transition: all 0.3s ease-out;
+}
+.footer__social-link:hover .footer__icon,
+.footer__social-link:focus .footer__icon {
+  transform: scale(1.5);
+  color: $text-red;
+  transition: all 0.3s ease-in;
 }
 .footer__contact {
   font-weight: bold;
@@ -132,7 +156,16 @@
   }
 }
 .footer__tel {
-  color: $text-red;
+  color: $text-pink;
+  transition: color 0.3s ease-out;
+  &:hover,
+  &:focus {
+    color: $text-red;
+  }
+}
+
+.footer__thumb-licence {
+  border-top: 1px solid $border-color;
 }
 .footer__licence {
   display: block;
@@ -157,7 +190,4 @@
     padding: 9px 387px 10px 387px;
     max-width: 1200px;
   }
-}
-.footer__thumb-licence {
-  border-top: 1px solid $border-color;
 }
