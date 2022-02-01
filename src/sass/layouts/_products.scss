@@ -148,29 +148,138 @@
 }
 .products__card--one::before {
   background-image: url(../images/product-one320@1x.png);
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/product-one320@2x.png);
+    background-size: cover;
+  }
+
+    @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    background-image: url(../images/product-one320@3x.png);
+    background-size: cover;
+    }
+
   @media screen and (min-width: 768px) {
     background-image: url(../images/product-one768@1x.png);
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/product-one768@2x.png);
+    background-size: cover;
+  }
+
+    @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    background-image: url(../images/product-one768@3x.png);
+    background-size: cover;
+    }
   }
   @media screen and (min-width: 1280px) {
     background-image: url(../images/product-one1280@1x.png);
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/product-one1280@2x.png);
+    background-size: cover;
+    }
+    @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    background-image: url(../images/product-one1280@3x.png);
+    background-size: cover;
+    }
   }
 }
+
 .products__card--two::before {
   background-image: url(../images/product-two320@1x.png);
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/product-two320@2x.png);
+    background-size: cover;}
+    @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    background-image: url(../images/product-two320@3x.png);
+    background-size: cover;
+    }
   @media screen and (min-width: 768px) {
     background-image: url(../images/product-two768@1x.png);
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/product-two768@2x.png);
+    background-size: cover;}
+    @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    background-image: url(../images/product-two768@3x.png);
+    background-size: cover;
+    }
   }
   @media screen and (min-width: 1280px) {
     background-image: url(../images/product-two1280@1x.png);
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/product-two1280@2x.png);
+    background-size: cover;}
+    @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    background-image: url(../images/product-two1280@3x.png);
+    background-size: cover;
+    }
   }
 }
 .products__card--three::before {
   background-image: url(../images/product-three320@1x.png);
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/product-three320@2x.png);
+    background-size: cover;
+  }
+    
+    @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    background-image: url(../images/product-three320@3x.png);
+    background-size: cover;
+    }
   @media screen and (min-width: 768px) {
     background-image: url(../images/product-three768@1x.png);
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/product-three768@2x.png);
+    background-size: cover;
+  }
+    @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    background-image: url(../images/product-three768@3x.png);
+    background-size: cover;
+    }
   }
   @media screen and (min-width: 1280px) {
     background-image: url(../images/product-three1280@1x.png);
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/product-three1280@2x.png);
+    background-size: cover;}
+    @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    background-image: url(../images/product-three1280@3x.png);
+    background-size: cover;
+    }
   }
 }
 .products__card-link {
@@ -227,35 +336,36 @@
   line-height: 1.52;
   text-align: center;
   letter-spacing: 0.04em;
+  margin: 0 auto;
 
   color: $background-white;
   @media screen and (max-width: 767px) {
-    padding-left: 40px;
-    padding-right: 40px;
+    /*padding-left: 40px;
+    padding-right: 40px;*/
   }
   @media screen and (min-width: 768px) {
     line-height: 1.76;
 
-    padding-left: 11px;
-    padding-right: 11px;
+    /*padding-left: 11px;
+    padding-right: 11px;*/
   }
   @media screen and (min-width: 1280px) {
     font-size: 16px;
 
-    padding-left: 44px;
-    padding-right: 44px;
+    /*padding-left: 44px;
+    padding-right: 44px;*/
   }
 }
 .products__card-button {
   border-radius: 50%;
   @media screen and (max-width: 767px) {
-    margin-bottom: 41px;
+    padding-bottom: 41px;
   }
   @media screen and (min-width: 768px) {
-    margin-bottom: 40px;
+    padding-bottom: 40px;
   }
   @media screen and (min-width: 1280px) {
-    margin-bottom: 50px;
+    padding-bottom: 50px;
   }
   &::after {
     content: '';
