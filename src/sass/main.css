@@ -2330,8 +2330,10 @@ img {
     height: 320px;
   }
   .gallery__image9 {
+    position: fixed;
     width: 320px;
     height: 320px;
+    /*overflow: visible;*/
     margin-top: -160px;
   }
   .gallery__image1:hover,
