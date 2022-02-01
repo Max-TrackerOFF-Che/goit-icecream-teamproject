@@ -9,6 +9,7 @@
                     how it’s made?
                 </h2>
             </div>
+
             <div class="about__bottom-box">
                 <picture data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="600">
                     <source srcset="
@@ -46,12 +47,14 @@
                         </p>
                     </div>
                     <div class="about__box-btn">
-                        <button type="button" class="about__bottom-btn btn btn-white btn-animate">
-                            Read More
-                            <svg class="btn__svg">
-                                <use href="./images/sprite.svg#arrow"></use>
-                            </svg>
-                        </button>
+                        <a href="#openModal">
+                            <button type="button" class="about__bottom-btn btn btn-white btn-animate">
+                                Read More
+                                <svg class="btn__svg">
+                                    <use href="./images/sprite.svg#arrow"></use>
+                                </svg>
+                            </button>
+                        </a>
                     </div>
                 </div>
                 <picture>
@@ -67,7 +70,30 @@
             " media="(min-width: 320px)" />
                     <img class="about__bottom-img" src="./images/about/about-milk.png" alt="Milk" />
                 </picture>
+
             </div>
+            <div id="openModal" class="about__modal">
+                <div class="about__modal-dialog">
+                    <div class="about__modal-content">
+                        <div class="about__modal-header">
+                            <p class="about__modal-title">title</p>
+                            <a href="#close" title="Close" class="about__modal-button">
+                                <svg class="about__modal-cross" width=15 height=15>
+                                    <use href="./images/sprite.svg#icon-x">
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="about__modal-body">
+                            <p>Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus
+                                orci in imperdiet placerat.
+                                Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa
+                                nibh, tincidunt.
+                                Aliquam erat volutpat. Aenean accumsan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
