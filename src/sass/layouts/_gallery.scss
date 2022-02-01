@@ -1,4 +1,4 @@
-@media screen and (min-width:320px) {
+@media screen and (min-width: 320px) {
   .gallery__img {
     max-width: 1199px;
     width: 100vw;
@@ -13,7 +13,7 @@
   }
 }
 
-@media screen and (min-width:1200px) {
+@media screen and (min-width: 1200px) {
   .gallery__img {
     display: none;
   }
@@ -23,17 +23,14 @@
     height: 430px;
     margin-left: auto;
     margin-right: auto;
-    background-image:
-      linear-gradient(to bottom,
-        #fff5f6 40%,
-        #fff 40%);
+    background-image: linear-gradient(to bottom, #fff5f6 40%, #fff 40%);
   }
 
   section {
     position: relative;
   }
 
-  img {
+  .gallery img {
     display: block;
     width: 160px;
     height: 160px;
@@ -67,7 +64,6 @@
   .gallery__image2 {
     width: 320px;
     height: 320px;
-
   }
 
   .gallery__image9 {
@@ -78,60 +74,63 @@
     margin-top: -160px;
   }
 
-
-  figure {
-    margin: 0;
-    padding: 0;
+  .gallery__image1:hover,
+  .gallery__image1:focus {
+    transform: scale(1.25);
+    z-index: 999;
   }
 
-  figure {
-    width: 160px;
-    height: 160px;
-    margin: 0;
-    padding: 0;
-    background: #fff;
-    overflow: hidden;
+  .gallery__image2:hover,
+  .gallery__image2:focus {
+    transform: scale(1.25);
+    z-index: 999;
   }
 
-  .gallery__img320 {
-    width: 320px;
-    height: 320px;
-
+  .gallery__image3:hover,
+  .gallery__image3:focus {
+    transform: scale(1.25);
+    z-index: 999;
   }
 
-  .gallery__section1 figure img {
-
-    transform: scale(1);
-
-    transition: .3s ease-in-out;
+  .gallery__image4:hover,
+  .gallery__image4:focus {
+    transform: scale(1.25);
+    z-index: 999;
   }
 
-  .gallery__section1 figure:hover img {
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3);
+  .gallery__image5:hover,
+  .gallery__image5:focus {
+    transform: scale(1.25);
+    z-index: 999;
   }
 
-  .gallery__section2 figure img {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
+  .gallery__image6:hover,
+  .gallery__image6:focus {
+    transform: scale(1.25);
+    z-index: 999;
   }
 
-  .gallery__section2 figure:hover img {
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3);
+  .gallery__image7:hover,
+  .gallery__image7:focus {
+    transform: scale(1.25);
+    z-index: 999;
   }
 
-  .gallery__section3 figure img {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
+  .gallery__image8:hover,
+  .gallery__image8:focus {
+    transform: scale(1.25);
+    z-index: 999;
   }
 
-  .gallery__section3 figure:hover img {
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3);
+  .gallery__image9:hover,
+  .gallery__image9:focus {
+    transform: scale(1.25);
+    z-index: 999;
+  }
+
+  .gallery__image10:hover,
+  .gallery__image10:focus {
+    transform: scale(1.25);
+    z-index: 999;
   }
 }
