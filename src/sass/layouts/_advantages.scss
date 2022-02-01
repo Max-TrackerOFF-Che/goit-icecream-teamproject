@@ -1,0 +1,123 @@
+.advantages {
+  background-color: $background-secondary-color;
+}
+.advantages__list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+
+    margin-right: 40px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-right: 0px;
+  }
+}
+.advantages__item {
+  width: 230px;
+  @media screen and (min-width: 768px) {
+    width: 180px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 330px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .advantages__item:not(:last-child) {
+    margin-bottom: 38px;
+  }
+}
+
+.icon-one::before {
+  display: block;
+  content: '';
+  width: 33px;
+  height: 50px;
+  background-image: url(../images/milk1.png);
+
+  animation-name: wobble;
+  animation-timing-function: ease;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+.icon-two::before {
+  display: block;
+  content: '';
+  width: 50px;
+  height: 50px;
+  background-image: url(../images/milk2.png);
+
+  animation-name: wobble;
+  animation-timing-function: ease;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+.icon-three::before {
+  display: block;
+  content: '';
+  width: 44px;
+  height: 50px;
+  background-image: url(../images/milk3.png);
+
+  animation-name: wobble;
+  animation-timing-function: ease;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+@keyframes wobble {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  15% {
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+  30% {
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+  45% {
+    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+  60% {
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+  75% {
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.advantages__subtitle {
+  font-family: Titan One, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.14;
+  color: $text-red;
+
+  margin-bottom: 10px;
+  margin-top: 16px;
+  @media screen and (min-width: 768px) {
+    font-size: 48px;
+
+    margin-top: 36px;
+    margin-bottom: 13px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 58px;
+
+    margin-top: 40px;
+    margin-bottom: 15px;
+  }
+}
+.advantages__text {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.7;
+
+  color: $text-black;
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+  }
+}
