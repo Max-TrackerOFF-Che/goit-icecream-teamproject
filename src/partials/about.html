@@ -2,13 +2,14 @@
     <div class="container">
         <div class="about__section">
             <div class="about__top-box">
-                <p class="about__top-text subtitle" data-aos="fade-up" data-aos-delay="150" data-aos-duration="800">
+                <p class="about__top-text small-title" data-aos="fade-up" data-aos-delay="150" data-aos-duration="800">
                     tradition and love
                 </p>
-                <h2 class="about__top-title title" data-aos="fade-up" data-aos-delay="250" data-aos-duration="800">
+                <h2 class="about__top-title big-title" data-aos="fade-up" data-aos-delay="250" data-aos-duration="800">
                     how it’s made?
                 </h2>
             </div>
+
             <div class="about__bottom-box">
                 <picture data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="600">
                     <source srcset="
@@ -32,26 +33,27 @@
                     data-aos-duration="600">
                     <div class="about__box-text">
                         <p class="about__bottom-text top-text">
-                            Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus,
-                            faucibus lorem eget, egestas eros. Maecenas eleifend erat at justo fringilla.
+                            Commercial ice cream is made with six steps: Milk, cream, milk solids, sugars, modifying agents and flavourings are
+                            blended together in stainless steel vats.
                         </p>
                     </div>
                     <div class="about__box-text">
                         <p class="about__bottom-text bottom-text">
-                            Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus
-                            orci in imperdiet placerat. Vestibulum euismod nisl suscipit ligula volutpat, a
-                            feugiat urna maximus. Cras massa nibh, tincidunt.
+                            By sourcing many of our ingredients locally instead of importing we are able to keep our carbon footprint low. Much of
+                            our local fruit is sourced from as little as 10 miles down the road.
 
-                            <span class="about__text-span">Aliquam erat volutpat. Aenean accumsan.</span>
+                            <span class="about__text-span">Better for the environment, and more ice cream for our lovely customers. A win-win!</span>
                         </p>
                     </div>
                     <div class="about__box-btn">
-                        <button type="button" class="about__bottom-btn btn btn-white btn-animate">
-                            Read More
-                            <svg class="btn__svg">
-                                <use href="./images/sprite.svg#arrow"></use>
-                            </svg>
-                        </button>
+                        <a href="#openModal">
+                            <button type="button" class="about__bottom-btn btn btn-white btn-animate">
+                                Read More
+                                <svg class="btn__svg">
+                                    <use href="./images/sprite.svg#arrow"></use>
+                                </svg>
+                            </button>
+                        </a>
                     </div>
                 </div>
                 <picture>
@@ -67,7 +69,28 @@
             " media="(min-width: 320px)" />
                     <img class="about__bottom-img" src="./images/about/about-milk.png" alt="Milk" />
                 </picture>
+
             </div>
+            <div id="openModal" class="about__modal">
+                <div class="about__modal-dialog">
+                    <div class="about__modal-content">
+                        <div class="about__modal-header">
+                            <p class="about__modal-title">Ice Cream can be healthy?</p>
+                            <a href="#close" title="Close" class="about__modal-button">
+                                <svg class="about__modal-cross" width=15 height=15>
+                                    <use href="./images/sprite.svg#icon-x">
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="about__modal-body">
+                            <p>Our ice cream and other products made from natural milk, so it's packed with important nutrients like calcium, phosphorus, B vitamins, potassium and vitamin D. Plus, it's an
+                            excellent source of protein. Drinking milk and dairy products may prevent osteoporosis and bone fractures and even help
+                            you maintain a healthy weight.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>

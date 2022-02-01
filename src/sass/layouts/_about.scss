@@ -83,7 +83,7 @@
 
   &__text-span {
     display: block;
-    margin-top: 10px;
+    margin-top: 15px;
   }
 
   &__box-btn {
@@ -207,8 +207,17 @@
   }
 }
 
-.subtitle {
+.small-title {
   margin-bottom: 15px;
+  color: $text-pink;
+  font-family: Titan One;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-transform: uppercase;
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     font-size: 26px;
@@ -223,7 +232,18 @@
   }
 }
 
-.title {
+.big-title {
+  color: $text-red;
+  font-family: Titan One;
+  font-size: 58px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+
   @media screen and (min-width: 768px) {
     font-size: 48px;
     line-height: 1.145;
@@ -238,6 +258,13 @@
 .top-text {
   margin-top: 46px;
   margin-bottom: 26px;
+  font-family: DM Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0.04em;
+  text-align: left;
 
   @media screen and (min-width: 768px) {
     margin-top: 50px;
@@ -252,6 +279,14 @@
 }
 
 .bottom-text {
+  font-family: DM Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: 0.04em;
+  text-align: left;
+
   color: #907e82;
   margin-bottom: 47px;
 
@@ -261,5 +296,126 @@
 
   @media screen and (min-width: 1200px) {
     margin-bottom: 45px;
+  }
+}
+/* modal windows*/
+.about__modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1050;
+  opacity: 0;
+
+  transition: opacity 200ms ease-in;
+  pointer-events: none;
+  margin: 0;
+  padding: 0;
+
+  &:target {
+    opacity: 1;
+    pointer-events: auto;
+    overflow-y: auto;
+  }
+}
+.about__modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+@media (min-width: 480px) {
+  .about__modal-dialog {
+    max-width: 480px;
+    margin: 30px auto;
+  }
+}
+.about__modal-content {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+  background-color: $background-white;
+  background-clip: padding-box;
+  border: 1px solid $text-pink;
+  box-shadow: 0 5px 15px rgb(144, 126, 130);
+  border-radius: 24px;
+  outline: 0;
+}
+
+.about__modal-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  padding: 25px;
+  border-bottom: 1px solid #eceeef;
+}
+.about__modal-title {
+  font-family: Titan One, sans-serif;
+
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  color: $text-pink;
+  @media screen and (min-width: 768px) {
+    font-size: 26px;
+    line-height: 1.154;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 30px;
+    line-height: calc(34 / 30);
+
+    letter-spacing: 0.04em;
+  }
+}
+.about__modal-button {
+  text-align: center;
+  padding-top: 7px;
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+  color: $background-white;
+  background-color: $background-pink;
+
+  border-radius: 50%;
+
+  transition: background-color $transition-options;
+  cursor: pointer;
+  &:focus,
+  &:hover {
+    background-color: $hover-social-icons-fill;
+  }
+}
+.about__modal-cross {
+  display: inline-block;
+
+  fill: currentColor;
+}
+.about__modal-body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: 15px;
+  overflow-y: auto;
+  display: inline-block;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: calc(19 / 12);
+  text-align: left;
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: calc(25 / 14);
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    line-height: calc(28 / 16);
   }
 }
