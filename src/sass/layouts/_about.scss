@@ -303,11 +303,15 @@
 .modal__franchise,
 .modal__locations {
   position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background: rgba(0, 0, 0, 0.5);
   z-index: 1050;
   opacity: 0;
 
-  transition: opacity 200ms ease-in;
+  transition: opacity 1s ease;
   pointer-events: none;
   margin: 0;
   padding: 0;
@@ -319,17 +323,28 @@
   }
 }
 .about__modal-dialog {
-  position: relative;
-  top: 20%;
-  width: auto;
-  margin: 20px;
+  width: 480px;
+  padding: 40px;
+  min-height: 40px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-@media (min-width: 480px) {
-  .about__modal-dialog {
-    max-width: 480px;
-    margin: 30px auto;
-  }
-}
+// @media (min-width: 480px) {
+//   .about__modal-dialog {
+//     width: 480px;
+//     padding: 40px;
+//     min-height: 40px;
+//     margin: 0 auto;
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//   }
+// }
+
 .about__modal-content {
   position: relative;
 
@@ -341,6 +356,7 @@
   border: 1px solid $text-pink;
   box-shadow: 0 5px 15px rgb(144, 126, 130);
   border-radius: 24px;
+  overflow: hidden;
   outline: 0;
 }
 
@@ -376,9 +392,10 @@
   }
 }
 .about__modal-button {
-  text-align: center;
-  padding-top: 7px;
-  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
   width: 30px;
   height: 30px;
   color: $background-white;
@@ -394,8 +411,6 @@
   }
 }
 .about__modal-cross {
-  display: inline-block;
-
   fill: currentColor;
 }
 .about__modal-body {
@@ -417,4 +432,11 @@
     font-size: 16px;
     line-height: calc(28 / 16);
   }
+}
+.about__maps {
+  background-color: $color-button;
+  padding: 30px;
+}
+.about__modal-maps {
+  background-color: $color-button;
 }

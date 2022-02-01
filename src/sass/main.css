@@ -2554,11 +2554,15 @@ img {
 .modal__franchise,
 .modal__locations {
   position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background: rgba(0, 0, 0, 0.5);
   z-index: 1050;
   opacity: 0;
-  -webkit-transition: opacity 200ms ease-in;
-  transition: opacity 200ms ease-in;
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
   pointer-events: none;
   margin: 0;
   padding: 0;
@@ -2573,17 +2577,15 @@ img {
 }
 
 .about__modal-dialog {
-  position: relative;
-  top: 20%;
-  width: auto;
-  margin: 20px;
-}
-
-@media (min-width: 480px) {
-  .about__modal-dialog {
-    max-width: 480px;
-    margin: 30px auto;
-  }
+  width: 480px;
+  padding: 40px;
+  min-height: 40px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .about__modal-content {
@@ -2601,6 +2603,7 @@ img {
   -webkit-box-shadow: 0 5px 15px #907e82;
           box-shadow: 0 5px 15px #907e82;
   border-radius: 24px;
+  overflow: hidden;
   outline: 0;
 }
 
@@ -2644,9 +2647,16 @@ img {
 }
 
 .about__modal-button {
-  text-align: center;
-  padding-top: 7px;
-  margin-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
   width: 30px;
   height: 30px;
   color: #fff;
@@ -2662,7 +2672,6 @@ img {
 }
 
 .about__modal-cross {
-  display: inline-block;
   fill: currentColor;
 }
 
@@ -2692,6 +2701,15 @@ img {
     font-size: 16px;
     line-height: calc(28 / 16);
   }
+}
+
+.about__maps {
+  background-color: #d41443;
+  padding: 30px;
+}
+
+.about__modal-maps {
+  background-color: #d41443;
 }
 
 .advantages {
@@ -3242,7 +3260,7 @@ img {
   background: #d31342;
 }
 
-@media screen and (min-width: 180px) {
+@media screen and (min-width: 320px) {
   .contacts {
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(4%, #fff), color-stop(4%, #fff5f6));
     background-image: linear-gradient(to bottom, #fff 4%, #fff5f6 4%);
