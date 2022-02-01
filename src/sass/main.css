@@ -2489,7 +2489,7 @@ img {
           justify-content: space-between;
   margin-top: 0;
   margin-bottom: 0;
-  padding: 15px;
+  padding: 25px;
   border-bottom: 1px solid #eceeef;
 }
 
@@ -2518,8 +2518,8 @@ img {
 
 .about__modal-button {
   text-align: center;
-  padding-top: 4px;
-  margin: 0;
+  padding-top: 7px;
+  margin-left: 10px;
   width: 30px;
   height: 30px;
   color: #fff;

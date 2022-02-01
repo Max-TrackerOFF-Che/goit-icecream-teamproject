@@ -354,7 +354,7 @@
   margin-top: 0;
   margin-bottom: 0;
 
-  padding: 15px;
+  padding: 25px;
   border-bottom: 1px solid #eceeef;
 }
 .about__modal-title {
@@ -377,11 +377,9 @@
   }
 }
 .about__modal-button {
-  // float: right;
-  // display: block;
   text-align: center;
-  padding-top: 4px;
-  margin: 0;
+  padding-top: 7px;
+  margin-left: 10px;
   width: 30px;
   height: 30px;
   color: $background-white;
@@ -398,6 +396,7 @@
 }
 .about__modal-cross {
   display: inline-block;
+
   fill: currentColor;
 }
 .about__modal-body {
