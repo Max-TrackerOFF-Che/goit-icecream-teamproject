@@ -22,9 +22,9 @@
                             <li class="nav-list__item"><a class="nav-list__link" href="#products">Our products</a></li>
                             <li class="nav-list__item"><a class="nav-list__link" href="#contacts">Contact</a></li>
                         </ul>
-                    </nav>
+                    </nav> 
                 </div>
-                <button type="button" class="header__mob-button">
+                <button type="button" class="header__mob-button my-class2 modal-open-js" data-modal-open>
                     Buy now
                     <svg class="header__mob-button-icon">
                         <use href="./images/header+hero/header-sprite.svg#pointer"></use>
@@ -37,7 +37,7 @@
                         <use href="./images/header+hero/header-sprite.svg#burger-menu" width="20" height="12"></use>
                     </svg>
                 </button>
-                <button type="button" class="header__mob-button header__mob-button--hidden">
+                <button type="button" class="header__mob-button header__mob-button--hidden modal-open-js" modal-open>
                     Buy now
                     <svg class="header__mob-button-icon">
                         <use href="./images/header+hero/header-sprite.svg#pointer"></use>
@@ -51,19 +51,19 @@
     <main>
         <!-- HERO -->
         <div class="header-and-hero">
-            <div class="hero">
+            <section class="hero">
                 <div class="hero__container">
                     <div class="hero__title-section">
                         <h1 class="hero__title">ice cream <br> made with <br><span class="hero__large-text">passion</span></h1>
                         <ul class="hero__buttons-list">
                             <li class="hero__buttons-list-item">
                                 <form style="display: inline" action="#products" method="get">
-                                    <button class="hero__nav-button hero__nav-button--red">Products</button>
+                                    <button class="hero__nav-button hero__nav-button--red btn-animated">Products</button>
                                 </form>
                             </li>
                             <li class="hero__buttons-list-item">
                                 <form style="display: inline" action="#about" method="get">
-                                    <button class="hero__nav-button">How it’s made?</button>
+                                    <button class="hero__nav-button btn-animated">How it’s made?</button>
                                 </form>
                             </li>
                         </ul>
@@ -84,15 +84,16 @@
                     <img alt="Кувшин с молоком" class="site-header__image" src="./images/bio-eco@1x.png">
                 </picture>
                 <div class="hero__description">
-                    <p class="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut
-                        labore et
-                    </p>
                     <button type="button" class="hero__description-button">
                         <svg class="hero__description-icon">
-                            <use href="./images/arrow-right@1x.png"></use>
+                            <use href="./images/header+hero/header-sprite.svg#arrow-right"></use>
                         </svg>
                     </button>
+                    <div class="hero__description-text-box">
+                        <p class="hero__description-text">
+                             Milk is white because of its fat content and on avarage, a cow produces 6.3 gallons of milk each day.
+                        </p>
+                    </div>
                 </div>
                 <picture class="hero__picture hero__picture--icecream">
                     <source srcset="./images/hero-icecream@1x.png 1x, ./images/hero-icecream@2x.png 2x"">
@@ -102,7 +103,66 @@
                     <source srcset="./images/tasty@1x.png 1x, ./images/tasty@2x.png 2x">
                     <img alt="девушка ест мороженное" class="site-header__image" src="./images/tasty@1x.png">
                 </picture>
-            </div>
+            </section>
         </div>
     </main>
+
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <h2 class="modal__title">Buy your favorite ice cream and we will deliver it to you<br><span class="modal__large-text">for free</span></h2>
+            <form class="modal__form">
+                <div class="modal__products-container">
+                    <label id="product" class="modal__product">Select Product</label>
+                    <select for="product" class="modal__select">
+                        <option class="modal__option">Ice Cream</option>
+                        <option class="modal__option">Ice Coffee</option>
+                        <option class="modal__option">Milkshakes</option>
+                    </select>
+                </div>
+                <div class="modal__input-container">
+                    <input type="text" name="name" id="person" class="modal__input">
+                    <svg class="modal__icon">
+                        <use href="./images/header+hero/header-sprite.svg#person"></use>
+                    </svg>
+                    <label for="person" class="modal__label">Name</label>
+                </div>
+                <div class="modal__input-container">
+                    <input type="tel" name="phone" id="phone" class="modal__input">
+                    <svg class="modal__icon">
+                        <use href="./images/header+hero/header-sprite.svg#modal_phone"></use>
+                    </svg>
+                    <label for="phone" class="modal__label">Phone</label>
+                </div>
+                <div class="modal__input-container">
+                    <input type="mail" name="mail" id="modal_email" class="modal__input">
+                    <svg class="modal__icon">
+                        <use href="./images/header+hero/header-sprite.svg#location"></use>
+                    </svg>
+                    <label for="modal_email" class="modal__label">Address</label>
+                </div>
+                <label class="conditions">
+                    <input type="checkbox" class="conditions__checkbox" name="conditions">
+                    <div class="conditions__no-wrap">
+                        <svg class="conditions__notcheck">
+                            <use href="./images/header+hero/header-sprite.svg#icon_notcheck"></use>
+                        </svg>
+                        <span class="conditions__text">I agree with the newsletter and accept</span>
+                    </div>
+                    <svg class="conditions__check">
+                        <use href="./images/header+hero/header-sprite.svg#icon_check"></use>
+                    </svg>
+                    <a href="" class="conditions__link">Terms of an agreement</a>
+                </label>
+                <button type="submit" class="action-button modal__action-button">Confirm
+                    <img class="modal__ice-cream-icon" src="./images/header+hero/ice-cream.png" alt="ise cream">
+                </button>
+            </form>
+            <button class="closer-button" type="button" data-modal-close>
+                <svg class="closer-button__image">
+                    <use href="./images/header+hero/header-sprite.svg#modal_close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    
 </div>
