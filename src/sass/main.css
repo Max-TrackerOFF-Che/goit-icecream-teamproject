@@ -649,6 +649,37 @@ img {
   }
 }
 
+.hero-image__thumb {
+  width: 538px;
+  height: 538px;
+  background-color: #ffa5ba;
+  z-index: 5;
+}
+
+@-webkit-keyframes colorChange {
+  0% {
+    fill: #28a357;
+  }
+  50% {
+    fill: #000;
+  }
+  100% {
+    fill: #e08686;
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    fill: #28a357;
+  }
+  50% {
+    fill: #000;
+  }
+  100% {
+    fill: #e08686;
+  }
+}
+
 .hero__title {
   font-family: Titan One;
   font-weight: 400;
@@ -1627,7 +1658,8 @@ img {
   }
 }
 
-.hero__picture--bio-eco {
+.hero__picture--bio-eco,
+.hero__title {
   -webkit-animation: 1s ease-out 0s 1 slideInFromLeft;
           animation: 1s ease-out 0s 1 slideInFromLeft;
 }
@@ -1663,7 +1695,8 @@ img {
   }
 }
 
-.hero__picture--tasty {
+.hero__picture--tasty,
+.hero__amount-item {
   -webkit-animation: 1s ease-out 0s 1 slideInFromRight;
           animation: 1s ease-out 0s 1 slideInFromRight;
 }
