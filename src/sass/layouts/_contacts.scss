@@ -260,7 +260,8 @@
       font-size: 16px;
     }
     .contacts__icon-franchise {
-      fill: $text-red;
+      fill: none;
+      stroke: currentColor;
     }
 
     .contacts__icon-location {
