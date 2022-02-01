@@ -24,7 +24,7 @@
                         </ul>
                     </nav> 
                 </div>
-                <button type="button" class="header__mob-button my-class2" data-modal-open2 >
+                <button type="button" class="header__mob-button my-class2 modal-open-js" data-modal-open>
                     Buy now
                     <svg class="header__mob-button-icon">
                         <use href="./images/header+hero/header-sprite.svg#pointer"></use>
@@ -37,7 +37,7 @@
                         <use href="./images/header+hero/header-sprite.svg#burger-menu" width="20" height="12"></use>
                     </svg>
                 </button>
-                <button type="button" class="header__mob-button header__mob-button--hidden" data-modal-open>
+                <button type="button" class="header__mob-button header__mob-button--hidden modal-open-js" modal-open>
                     Buy now
                     <svg class="header__mob-button-icon">
                         <use href="./images/header+hero/header-sprite.svg#pointer"></use>
@@ -51,7 +51,7 @@
     <main>
         <!-- HERO -->
         <div class="header-and-hero">
-            <div class="hero">
+            <section class="hero">
                 <div class="hero__container">
                     <div class="hero__title-section">
                         <h1 class="hero__title">ice cream <br> made with <br><span class="hero__large-text">passion</span></h1>
@@ -103,49 +103,59 @@
                     <source srcset="./images/tasty@1x.png 1x, ./images/tasty@2x.png 2x">
                     <img alt="девушка ест мороженное" class="site-header__image" src="./images/tasty@1x.png">
                 </picture>
-            </div>
+            </section>
         </div>
     </main>
 
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <h2 class="modal__title">Оставьте свои данные, мы вам перезвоним</h2>
+            <h2 class="modal__title">Buy your favorite ice cream and we will deliver it to you<br><span class="modal__large-text">for free</span></h2>
             <form class="modal__form">
-                <label for="person" class="modal__label">Имя</label>
+                <div class="modal__products-container">
+                    <label id="product" class="modal__product">Select Product</label>
+                    <select for="product" class="modal__select">
+                        <option class="modal__option">Ice Cream</option>
+                        <option class="modal__option">Ice Coffee</option>
+                        <option class="modal__option">Milkshakes</option>
+                    </select>
+                </div>
                 <div class="modal__input-container">
                     <input type="text" name="name" id="person" class="modal__input">
                     <svg class="modal__icon">
                         <use href="./images/header+hero/header-sprite.svg#person"></use>
                     </svg>
+                    <label for="person" class="modal__label">Name</label>
                 </div>
-                <label for="phone" class="modal__label">Телефон</label>
                 <div class="modal__input-container">
                     <input type="tel" name="phone" id="phone" class="modal__input">
                     <svg class="modal__icon">
                         <use href="./images/header+hero/header-sprite.svg#modal_phone"></use>
                     </svg>
+                    <label for="phone" class="modal__label">Phone</label>
                 </div>
-                <label for="modal_email" class="modal__label">Почта</label>
                 <div class="modal__input-container">
                     <input type="mail" name="mail" id="modal_email" class="modal__input">
                     <svg class="modal__icon">
-                        <use href="./images/header+hero/header-sprite.svg#modal_email"></use>
+                        <use href="./images/header+hero/header-sprite.svg#location"></use>
                     </svg>
+                    <label for="modal_email" class="modal__label">Address</label>
                 </div>
-                <label for="comment" class="modal__label">Комментарий</label>
-                <textarea placeholder="Введите текст" id="comment" class="modal__textarea"></textarea>
                 <label class="conditions">
                     <input type="checkbox" class="conditions__checkbox" name="conditions">
-                    <svg class="conditions__notcheck">
-                        <use href="./images/header+hero/header-sprite.svg#icon_notcheck"></use>
-                    </svg>
+                    <div class="conditions__no-wrap">
+                        <svg class="conditions__notcheck">
+                            <use href="./images/header+hero/header-sprite.svg#icon_notcheck"></use>
+                        </svg>
+                        <span class="conditions__text">I agree with the newsletter and accept</span>
+                    </div>
                     <svg class="conditions__check">
                         <use href="./images/header+hero/header-sprite.svg#icon_check"></use>
                     </svg>
-                    <span class="conditions__text">Соглашаюсь с рассылкой и принимаю</span>
-                    <a href="" class="conditions__link">Условия договора</a>
+                    <a href="" class="conditions__link">Terms of an agreement</a>
                 </label>
-                <button type="submit" class="action-button modal__action-button">Отправить</button>
+                <button type="submit" class="action-button modal__action-button">Confirm
+                    <img class="modal__ice-cream-icon" src="./images/header+hero/ice-cream.png" alt="ise cream">
+                </button>
             </form>
             <button class="closer-button" type="button" data-modal-close>
                 <svg class="closer-button__image">
