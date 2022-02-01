@@ -1,0 +1,37 @@
+#back-button {
+  display: inline-block;
+  background-color: $text-pink;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#back-button::after {
+  content: '\f077';
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: $text-red;
+}
+#back-button:hover {
+  cursor: pointer;
+  background-color: $text-pink;
+  transform: scale(200%);
+  border-radius: 50%;
+}
+#back-button:active {
+  background-color: $background-white;
+}
+#back-button.show {
+  opacity: 1;
+  visibility: visible;
+}
