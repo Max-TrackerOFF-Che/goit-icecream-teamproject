@@ -83,7 +83,7 @@
 
   &__text-span {
     display: block;
-    margin-top: 10px;
+    margin-top: 15px;
   }
 
   &__box-btn {
@@ -207,8 +207,17 @@
   }
 }
 
-.subtitle {
+.small-title {
   margin-bottom: 15px;
+  color: $text-pink;
+  font-family: Titan One;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-transform: uppercase;
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     font-size: 26px;
@@ -223,7 +232,18 @@
   }
 }
 
-.title {
+.big-title {
+  color: $text-red;
+  font-family: Titan One;
+  font-size: 58px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+
   @media screen and (min-width: 768px) {
     font-size: 48px;
     line-height: 1.145;
@@ -238,6 +258,13 @@
 .top-text {
   margin-top: 46px;
   margin-bottom: 26px;
+  font-family: DM Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0.04em;
+  text-align: left;
 
   @media screen and (min-width: 768px) {
     margin-top: 50px;
@@ -252,6 +279,14 @@
 }
 
 .bottom-text {
+  font-family: DM Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: 0.04em;
+  text-align: left;
+
   color: #907e82;
   margin-bottom: 47px;
 
