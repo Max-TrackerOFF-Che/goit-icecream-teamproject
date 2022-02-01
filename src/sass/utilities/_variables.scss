@@ -24,3 +24,35 @@ $mobile-menu-border-color: #e18298;
 $transition-options: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 $slideInFromLeft: 1s ease-out 0s 1 slideInFromLeft;
 $slideInFromRight: 1s ease-out 0s 1 slideInFromRight;
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
