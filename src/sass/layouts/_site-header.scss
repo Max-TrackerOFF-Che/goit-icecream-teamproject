@@ -1037,18 +1037,6 @@
   }
 }
 
-.hero__picture--bio-eco,
-.hero__title {
-  animation: $slideInFromLeft;
-}
-.hero__description-button {
-  animation: $slideInFromLeft;
-}
-
-.hero__picture--tasty,
-.hero__amount-item {
-  animation: $slideInFromRight;
-}
 .btn-animated {
   animation: moveInBottom 2s ease-out;
 }
