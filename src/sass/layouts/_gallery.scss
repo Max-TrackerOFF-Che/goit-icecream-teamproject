@@ -23,14 +23,14 @@
     height: 430px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .gallery__gradient {
+    position: relative;
     background-image: linear-gradient(to bottom, #fff5f6 40%, #fff 40%);
   }
 
-  section {
-    position: relative;
-  }
-
-  .gallery img {
+  .gallery__images {
     display: block;
     width: 160px;
     height: 160px;
@@ -67,70 +67,72 @@
   }
 
   .gallery__image9 {
-    position: fixed;
     width: 320px;
     height: 320px;
-    /*overflow: visible;*/
     margin-top: -160px;
   }
 
   .gallery__image1:hover,
   .gallery__image1:focus {
     transform: scale(1.25);
-    z-index: 999;
+    z-index: 9;
   }
 
   .gallery__image2:hover,
   .gallery__image2:focus {
     transform: scale(1.25);
-    z-index: 999;
+    z-index: 9;
   }
 
   .gallery__image3:hover,
   .gallery__image3:focus {
     transform: scale(1.25);
-    z-index: 999;
+    z-index: 9;
   }
 
   .gallery__image4:hover,
   .gallery__image4:focus {
     transform: scale(1.25);
-    z-index: 999;
+    z-index: 9;
   }
 
   .gallery__image5:hover,
   .gallery__image5:focus {
     transform: scale(1.25);
-    z-index: 999;
+    z-index: 9;
   }
 
   .gallery__image6:hover,
   .gallery__image6:focus {
     transform: scale(1.25);
-    z-index: 999;
+    z-index: 9;
   }
 
   .gallery__image7:hover,
   .gallery__image7:focus {
     transform: scale(1.25);
-    z-index: 999;
+    z-index: 9;
   }
 
   .gallery__image8:hover,
   .gallery__image8:focus {
     transform: scale(1.25);
-    z-index: 999;
+    z-index: 9;
   }
 
   .gallery__image9:hover,
   .gallery__image9:focus {
     transform: scale(1.25);
-    z-index: 999;
+    z-index: 9;
   }
 
   .gallery__image10:hover,
   .gallery__image10:focus {
     transform: scale(1.25);
-    z-index: 999;
+    z-index: 9;
+  }
+  .gallery__gradient {
+    padding-top: 139px;
+    margin-bottom: 123px;
   }
 }
