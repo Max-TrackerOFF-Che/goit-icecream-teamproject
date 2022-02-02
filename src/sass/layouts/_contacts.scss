@@ -28,18 +28,17 @@
   }
 
   .contacts__name {
-    display: block;
+    display: inline-block;
+    padding: 0 25px;
     background-color: $background-two-color;
     color: $background-secondary-color;
-    padding-right: 20px;
-    padding-left: 20px;
+    line-height: 1.86;
+    text-transform: uppercase;
     border-radius: 4px;
-    margin-bottom: 25px;
   }
 
   .contacts__name-color {
-    background-color: $background-pink;
-    width: 130px;
+    width: 138px;
   }
 
   .contacts__city {
