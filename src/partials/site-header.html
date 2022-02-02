@@ -7,8 +7,8 @@
                     <img alt="логотип сайта" class="site-header__image" src="./images/ice-cream-logo.png">
                 </picture>
             </a>
-            <div class="header__mob-menu ">
-                <button type="button" class="header__menu-closer-button is-open my-class2">
+            <div class="header__mob-menu">
+                <button type="button" class="header__menu-closer-button  my-class2">
                     <svg class="header__menu-closer-icon" width="14" height="14">
                         <use href="./images/sprite.svg#icon-x"></use>
                     </svg>
@@ -24,7 +24,7 @@
                         </ul>
                     </nav> 
                 </div>
-                <button type="button" class="header__mob-button my-class2 modal-open-js" data-modal-open>
+                <button type="button" class="header__mob-button my-class2" hero-modal-open>
                     Buy now
                     <svg class="header__mob-button-icon">
                         <use href="./images/header+hero/header-sprite.svg#pointer"></use>
@@ -32,12 +32,12 @@
                 </button>
             </div>
             <div class="header__buttons">
-                <button type="button" class="header__menu-button is-open my-class1">
+                <button type="button" class="header__menu-button  my-class1">
                     <svg class="header__menu-icon" width="20" height="12">
                         <use href="./images/header+hero/header-sprite.svg#burger-menu" width="20" height="12"></use>
                     </svg>
                 </button>
-                <button type="button" class="header__mob-button header__mob-button--hidden modal-open-js" modal-open>
+                <button type="button" class="header__mob-button header__mob-button--hidden" second-modal-open>
                     Buy now
                     <svg class="header__mob-button-icon">
                         <use href="./images/header+hero/header-sprite.svg#pointer"></use>
@@ -107,38 +107,40 @@
         </div>
     </main>
 
-    <div class="backdrop is-hidden" data-modal>
-        <div class="modal">
-            <h2 class="modal__title">Buy your favorite ice cream and we will deliver it to you<br><span class="modal__large-text">for free</span></h2>
-            <form class="modal__form">
-                <div class="modal__products-container">
-                    <label id="product" class="modal__product">Select Product</label>
-                    <select class="modal__select">
-                        <option class="modal__option">Ice Cream</option>
-                        <option class="modal__option">Ice Coffee</option>
-                        <option class="modal__option">Milkshakes</option>
+
+    <div class="backdrop is-hidden" hero-modal>
+        <div class="header-modal">
+            <h2 class="header-modal__title">Buy your favorite ice cream and we will deliver it to you<br><span class="header-modal__large-text">for free</span></h2>
+            <form class="header-modal__form">
+                <div class="header-modal__products-container">
+                    <label id="product" class="header-modal__product">Select Product</label>
+                    <select for="product" class="header-modal__select">
+                        <option class="header-modal__option">Ice Cream</option>
+                        <option class="header-modal__option">Ice Coffee</option>
+                        <option class="header-modal__option">Milkshakes</option>
                     </select>
                 </div>
-                <div class="modal__input-container">
-                    <input type="text" name="name" id="person" class="modal__input">
-                    <svg class="modal__icon">
+                <div class="header-modal__input-container">
+                    <input type="text" name="name" id="person" class="header-modal__input">
+                    <svg class="header-modal__icon">
                         <use href="./images/header+hero/header-sprite.svg#person"></use>
                     </svg>
-                    <label for="person" class="modal__label">Name</label>
+                    <label for="person" class="header-modal__label">Name</label>
                 </div>
-                <div class="modal__input-container">
-                    <input type="tel" name="phone" id="phone" class="modal__input">
-                    <svg class="modal__icon">
+                <div class="header-modal__input-container">
+                    <input type="tel" name="phone" id="phone" class="header-modal__input">
+                    <svg class="header-modal__icon">
                         <use href="./images/header+hero/header-sprite.svg#modal_phone"></use>
                     </svg>
-                    <label for="phone" class="modal__label">Phone</label>
+                    <label for="phone" class="header-modal__label">Phone</label>
                 </div>
-                <div class="modal__input-container">
-                    <input name="mail" id="modal_email" class="modal__input">
-                    <svg class="modal__icon">
+
+                <div class="header-modal__input-container">
+                    <input type="mail" name="mail" id="header-modal_email" class="header-modal__input">
+                    <svg class="header-modal__icon">
                         <use href="./images/header+hero/header-sprite.svg#location"></use>
                     </svg>
-                    <label for="modal_email" class="modal__label">Address</label>
+                    <label for="header-modal_email" class="header-modal__label">Address</label>
                 </div>
                 <label class="conditions">
                     <input type="checkbox" class="conditions__checkbox" name="conditions">
@@ -153,11 +155,11 @@
                     </svg>
                     <a href="" class="conditions__link">Terms of an agreement</a>
                 </label>
-                <button type="submit" class="action-button modal__action-button">Confirm
-                    <img class="modal__ice-cream-icon" src="./images/header+hero/ice-cream.png" alt="ise cream">
+                <button type="submit" class="action-button header-modal__action-button">Confirm
+                    <img class="header-modal__ice-cream-icon" src="./images/header+hero/ice-cream.png" alt="ise cream">
                 </button>
             </form>
-            <button class="closer-button" type="button" data-modal-close>
+            <button class="closer-button" type="button" hero-modal-close>
                 <svg class="closer-button__image">
                     <use href="./images/header+hero/header-sprite.svg#modal_close"></use>
                 </svg>

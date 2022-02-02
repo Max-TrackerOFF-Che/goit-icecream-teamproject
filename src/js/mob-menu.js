@@ -5,11 +5,11 @@
   console.log(menuBtnRef);
   mobileMenuRef.forEach(function (item) {
     item.addEventListener('click', () => {
-    menuContainerRef.classList.toggle('is-open');
+    menuContainerRef.classList.toggle('mob-is-open');
     });
   });
   menuBtnRef.addEventListener('click', () => {
     console.log(222);
-    menuContainerRef.classList.toggle('is-open');
+    menuContainerRef.classList.toggle('mob-is-open');
     });
 })();
