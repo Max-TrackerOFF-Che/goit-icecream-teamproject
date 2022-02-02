@@ -11,33 +11,33 @@
             </div>
 
             <div class="about__bottom-box">
-                <picture data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="600">
-                    <source srcset="
-              ./images/about/desktop-cow-1x.png 1x,
-              ./images/about/desktop-cow-2x.png 2x,
-              ./images/about/desktop-cow-3x.png 3x
-            " media="(min-width: 1200px)" />
-                    <source srcset="
-              ./images/about/tablet-cow-1x.png 1x,
-              ./images/about/tablet-cow-2x.png 2x,
-              ./images/about/tablet-cow-3x.png 3x
-            " media="(min-width: 768px)" />
-                    <source srcset="
-              ./images/about/mobile-cow-1x.png 1x,
-              ./images/about/mobile-cow-2x.png 2x,
-              ./images/about/mobile-cow-3x.png 3x
-            " media="(min-width: 320px)" />
-                    <img src="./images/about/about-cow.png" alt="Cow with milk" />
-                </picture>
+                <div class="about__image-box">
+                    <picture data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="600">
+                        <source srcset="
+                                          ./images/about/desktop-cow-1x.png 1x,
+                                          ./images/about/desktop-cow-2x.png 2x,
+                                          ./images/about/desktop-cow-3x.png 3x
+                                        " media="(min-width: 1280px)" />
+                        <source srcset="
+                                          ./images/about/tablet-cow-1x.png 1x,
+                                          ./images/about/tablet-cow-2x.png 2x,
+                                          ./images/about/tablet-cow-3x.png 3x
+                                        " media="(min-width: 768px)" />
+                        <source srcset="
+                                          ./images/about/mobile-cow-1x.png 1x,
+                                          ./images/about/mobile-cow-2x.png 2x,
+                                          ./images/about/mobile-cow-3x.png 3x
+                                        " media="(min-width: 320px)" />
+                        <img src="./images/about/about-cow.png" alt="Cow with milk" class="about__image"/>
+                    </picture>
+                </div>
                 <div class="about__text-box" data-aos="fade-up" data-aos-anchor-placement="center-bottom"
                     data-aos-duration="600">
-                    <div class="about__box-text">
+                    <div >
                         <p class="about__bottom-text top-text">
                             Commercial ice cream is made with six steps: Milk, cream, milk solids, sugars, modifying agents and flavourings are
                             blended together in stainless steel vats.
                         </p>
-                    </div>
-                    <div class="about__box-text">
                         <p class="about__bottom-text bottom-text">
                             By sourcing many of our ingredients locally instead of importing we are able to keep our carbon footprint low. Much of
                             our local fruit is sourced from as little as 10 miles down the road.
@@ -56,20 +56,6 @@
                         </a>
                     </div>
                 </div>
-                <picture>
-                    <source srcset="
-              ./images/about/desktop-milk-1x.png 1x,
-              ./images/about/desktop-milk-2x.png 2x,
-              ./images/about/desktop-milk-3x.png 3x
-            " media="(min-width: 1200px)" />
-                    <source srcset="
-              ./images/about/mobile-milk-1x.png 1x,
-              ./images/about/mobile-milk-2x.png 2x,
-              ./images/about/mobile-milk-3x.png 3x
-            " media="(min-width: 320px)" />
-                    <img class="about__bottom-img" src="./images/about/about-milk.png" alt="Milk" />
-                </picture>
-
             </div>
             <div id="openModal" class="about__modal">
                 <div class="about__modal-dialog">
@@ -78,7 +64,7 @@
                             <p class="about__modal-title">Ice Cream can be healthy?</p>
                             <a href="#close" title="Close" class="about__modal-button">
                                 <svg class="about__modal-cross" width=15 height=15>
-                                    <use href="./images/sprite.svg#icon-x"></use>
+                                    <use href="./images/sprite.svg#icon-x">
                                 </svg>
                             </a>
                         </div>
@@ -92,5 +78,20 @@
             </div>
 
         </div>
+    </div>
+    <div class="about__bg-image">
+        <picture>
+            <source srcset="
+                      ./images/about/desktop-milk-1x.png 1x,
+                      ./images/about/desktop-milk-2x.png 2x,
+                      ./images/about/desktop-milk-3x.png 3x
+                    " media="(min-width: 1200px)" />
+            <source srcset="
+                      ./images/about/mobile-milk-1x.png 1x,
+                      ./images/about/mobile-milk-2x.png 2x,
+                      ./images/about/mobile-milk-3x.png 3x
+                    " media="(min-width: 320px)" />
+            <img class="about__bottom-img" src="./images/about/about-milk.png" alt="Milk" />
+        </picture>
     </div>
 </section>
