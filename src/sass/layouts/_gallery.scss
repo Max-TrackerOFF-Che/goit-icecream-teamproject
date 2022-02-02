@@ -13,6 +13,12 @@
   }
 }
 
+.gallery__gradient {
+  padding-top: 140px;
+  padding-bottom: 121px;
+  background-image: linear-gradient(to bottom, #fff5f6 40%, #fff 40%);
+}
+
 @media screen and (min-width: 1200px) {
   .gallery__img {
     display: none;
@@ -133,6 +139,6 @@
   }
   .gallery__gradient {
     padding-top: 139px;
-    margin-bottom: 123px;
+    padding-bottom: 123px;
   }
 }

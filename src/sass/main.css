@@ -2838,6 +2838,13 @@ img {
   }
 }
 
+.gallery__gradient {
+  padding-top: 140px;
+  padding-bottom: 121px;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #fff5f6), color-stop(40%, #fff));
+  background-image: linear-gradient(to bottom, #fff5f6 40%, #fff 40%);
+}
+
 @media screen and (min-width: 1200px) {
   .gallery__img {
     display: none;
@@ -2961,12 +2968,11 @@ img {
   }
   .gallery__gradient {
     padding-top: 139px;
-    margin-bottom: 123px;
+    padding-bottom: 123px;
   }
 }
 
 .cusomer__reviews {
-  margin-top: 123px;
   margin-bottom: 132px;
   position: relative;
 }
@@ -2981,10 +2987,6 @@ img {
     padding-left: 59px;
     padding-right: 59px;
   }
-}
-
-.reviews-card {
-  padding-top: 80px;
 }
 
 .reviews-card__img {
