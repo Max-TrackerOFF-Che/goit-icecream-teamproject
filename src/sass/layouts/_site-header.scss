@@ -1,6 +1,7 @@
 .header-and-hero {
   margin: auto;
-  @media screen and (min-width: 320px) and (max-width: 767px) {
+  position: relative;
+  @media screen and (min-width: 480px) {
     max-width: 480px;
   }
   @media screen and (min-width: 768px) {
@@ -13,17 +14,17 @@
 
 .overflow {
   overflow: hidden;
+  background-color: $background-pink;
 }
 
 .header {
   padding-top: 6px;
   padding-left: 20px;
   padding-right: 20px;
-  position: relative;
+  // position: relative;
   justify-content: space-between;
   align-items: center;
   display: flex;
-  background-color: $background-pink;
 
   @media screen and (min-width: 768px) {
     padding-left: 34px;
@@ -45,7 +46,7 @@
     width: 14px;
     height: 14px;
     position: absolute;
-    right: 48px;
+    right: 34px;
     top: 23px;
     box-sizing: border-box;
     padding: 0;
@@ -83,7 +84,7 @@
   margin-right: 30px;
 
   @media screen and (min-width: 768px) {
-    margin-right: 65px;
+    margin-right: 20px;
   }
 }
 
@@ -167,8 +168,7 @@
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  background-color: $background-pink;
-  height: 450px;
+  min-height: 450px;
 
   @media screen and (min-width: 768px) {
     overflow: visible;
@@ -605,12 +605,15 @@
     flex-direction: column-reverse;
     justify-content: flex-end;
     position: absolute;
-    left: -150%;
     top: 0;
-    width: 100%;
     min-height: 100vh;
     background-color: $background-mobile-menu-color;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (max-width: 767px) {
+      width: 250px;
+      left: -500px;
+    }
 
     @media screen and (min-width: 768px) {
       width: 250px;
@@ -619,7 +622,9 @@
   }
 
   .is-open {
-    transform: translateX(150%);
+    @media screen and (max-width: 767px) {
+      transform: translateX(200%);
+    }
 
     @media screen and (min-width: 768px) {
       transform: translateX(200%);
@@ -655,8 +660,8 @@
   top: 0;
   left: 0;
 
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
 
   padding-left: 15px;
@@ -668,7 +673,7 @@
   }
 }
 
-.modal {
+.header-modal {
   z-index: 6;
   position: absolute;
 
@@ -679,22 +684,28 @@
   background-image: url(../images/header+hero/modal-bg.jpg);
   background-size: cover;
   background-position: 50% 100%;
-  max-width: 450px;
-  width: 100%;
   max-height: 609px;
-  height: 100%;
+  max-height: 100vh;
   border-radius: 10px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   padding: 30px 40px;
+
+  @media screen and (max-width: 479px) {
+    width: 280px;
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    width: 410px;
+  }
 
   @media screen and (max-width: 1199px) {
     overflow-y: auto;
   }
 
   @media screen and (min-width: 1200px) {
-    max-width: 528px;
-    max-height: 581px;
+    width: 528px;
+    height: 581px;
   }
 
   &__title {
@@ -746,7 +757,7 @@
   }
 }
 
-.modal__label {
+.header-modal__label {
   position: absolute;
   left: 43px;
   top: 12px;
@@ -756,18 +767,18 @@
   color: $background-mobile-menu-color;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  .modal__input:focus ~ & {
+  .header-modal__input:focus ~ & {
     transform: translateY(-30px);
     color: $text-red;
   }
 }
 
-.modal__ice-cream-icon {
+.header-modal__ice-cream-icon {
   margin-left: 10px;
   color: $background-white;
 }
 
-.modal__icon {
+.header-modal__icon {
   position: absolute;
   top: 50%;
   left: 12px;
@@ -778,12 +789,12 @@
   fill: $background-mobile-menu-color;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  .modal__input:focus + & {
+  .header-modal__input:focus + & {
     fill: $text-red;
   }
 }
 
-.modal__input {
+.header-modal__input {
   border: 3px solid $background-mobile-menu-color;
   border-radius: 8px;
   padding: 10px 42px;
@@ -803,7 +814,7 @@
   }
 }
 
-.modal__product {
+.header-modal__product {
   display: inline-block;
   color: $text-red;
   font-weight: 700;
@@ -811,7 +822,7 @@
   margin-right: 10px;
 }
 
-.modal__select {
+.header-modal__select {
   font-size: 20px;
   color: $background-mobile-menu-color;
   background-color: $background-white;
@@ -824,13 +835,13 @@
   }
 }
 
-.modal__option {
+.header-modal__option {
   font-size: 15px;
   color: $text-red;
   background-color: $background-white;
 }
 
-.modal__products-container {
+.header-modal__products-container {
   margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
