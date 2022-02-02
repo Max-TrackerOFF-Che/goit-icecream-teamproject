@@ -342,9 +342,10 @@ img {
 
 .header-and-hero {
   margin: auto;
+  position: relative;
 }
 
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (min-width: 480px) {
   .header-and-hero {
     max-width: 480px;
   }
@@ -364,13 +365,13 @@ img {
 
 .overflow {
   overflow: hidden;
+  background-color: #ffb8ca;
 }
 
 .header {
   padding-top: 6px;
   padding-left: 20px;
   padding-right: 20px;
-  position: relative;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -380,7 +381,6 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #ffb8ca;
 }
 
 @media screen and (min-width: 768px) {
@@ -407,7 +407,7 @@ img {
   width: 14px;
   height: 14px;
   position: absolute;
-  right: 48px;
+  right: 34px;
   top: 23px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -453,7 +453,7 @@ img {
 
 @media screen and (min-width: 768px) {
   .header__menu-button {
-    margin-right: 65px;
+    margin-right: 20px;
   }
 }
 
@@ -568,8 +568,7 @@ img {
           align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background-color: #ffb8ca;
-  height: 450px;
+  min-height: 450px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1098,15 +1097,20 @@ img {
         -ms-flex-pack: end;
             justify-content: flex-end;
     position: absolute;
-    left: -150%;
     top: 0;
-    width: 100%;
     min-height: 100vh;
     background-color: #e17992;
     -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@media screen and (max-width: 1199px) and (max-width: 767px) {
+  .header__mob-menu {
+    width: 250px;
+    left: -500px;
   }
 }
 
@@ -1117,10 +1121,10 @@ img {
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1199px) and (max-width: 767px) {
   .is-open {
-    -webkit-transform: translateX(150%);
-            transform: translateX(150%);
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
   }
 }
 
@@ -1158,8 +1162,8 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
   padding-left: 15px;
   padding-right: 15px;
@@ -1170,7 +1174,7 @@ img {
   pointer-events: none;
 }
 
-.modal {
+.header-modal {
   z-index: 6;
   position: absolute;
   top: 50%;
@@ -1180,30 +1184,40 @@ img {
   background-image: url(../images/header+hero/modal-bg.jpg);
   background-size: cover;
   background-position: 50% 100%;
-  max-width: 450px;
-  width: 100%;
   max-height: 609px;
-  height: 100%;
+  max-height: 100vh;
   border-radius: 10px;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   padding: 30px 40px;
 }
 
+@media screen and (max-width: 479px) {
+  .header-modal {
+    width: 280px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .header-modal {
+    width: 410px;
+  }
+}
+
 @media screen and (max-width: 1199px) {
-  .modal {
+  .header-modal {
     overflow-y: auto;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .modal {
-    max-width: 528px;
-    max-height: 581px;
+  .header-modal {
+    width: 528px;
+    height: 581px;
   }
 }
 
-.modal__title {
+.header-modal__title {
   font-family: Titan One;
   text-align: center;
   letter-spacing: 2px;
@@ -1214,23 +1228,23 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
-  .modal__title {
+  .header-modal__title {
     line-height: 1.5;
   }
 }
 
-.modal__large-text {
+.header-modal__large-text {
   font-size: 30px;
   color: #d41443;
 }
 
-.modal__input-container {
+.header-modal__input-container {
   position: relative;
   margin-bottom: 14px;
   margin-top: 4px;
 }
 
-.modal__form {
+.header-modal__form {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -1241,7 +1255,7 @@ img {
   width: 100%;
 }
 
-.modal__action-button {
+.header-modal__action-button {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.17;
@@ -1263,7 +1277,7 @@ img {
   margin-right: auto;
 }
 
-.modal__label {
+.header-modal__label {
   position: absolute;
   left: 43px;
   top: 12px;
@@ -1277,18 +1291,18 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal__input:focus ~ .modal__label {
+.header-modal__input:focus ~ .header-modal__label {
   -webkit-transform: translateY(-30px);
           transform: translateY(-30px);
   color: #d41443;
 }
 
-.modal__ice-cream-icon {
+.header-modal__ice-cream-icon {
   margin-left: 10px;
   color: #fff;
 }
 
-.modal__icon {
+.header-modal__icon {
   position: absolute;
   top: 50%;
   left: 12px;
@@ -1301,11 +1315,11 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal__input:focus + .modal__icon {
+.header-modal__input:focus + .header-modal__icon {
   fill: #d41443;
 }
 
-.modal__input {
+.header-modal__input {
   border: 3px solid #e17992;
   border-radius: 8px;
   padding: 10px 42px;
@@ -1322,11 +1336,11 @@ img {
           box-shadow: 6px 8px 7px -1px rgba(174, 23, 163, 0.2);
 }
 
-.modal__input:focus {
+.header-modal__input:focus {
   border-color: #d41443;
 }
 
-.modal__product {
+.header-modal__product {
   display: inline-block;
   color: #d41443;
   font-weight: 700;
@@ -1334,7 +1348,7 @@ img {
   margin-right: 10px;
 }
 
-.modal__select {
+.header-modal__select {
   font-size: 20px;
   color: #e17992;
   background-color: #fff;
@@ -1342,18 +1356,18 @@ img {
   border: 3px solid #e17992;
 }
 
-.modal__select:focus {
+.header-modal__select:focus {
   border-color: #d41443;
   color: #d41443;
 }
 
-.modal__option {
+.header-modal__option {
   font-size: 15px;
   color: #d41443;
   background-color: #fff;
 }
 
-.modal__products-container {
+.header-modal__products-container {
   margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
