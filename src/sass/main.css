@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
 Document
@@ -1987,13 +1988,6 @@ img {
           justify-content: center;
   padding-left: 16px;
   padding-right: 16px;
-  /*margin-bottom: 30px;
-  @media screen and (min-width: 767px) {
-    margin-bottom: 40px;
-  }
-  @media screen and (min-width: 1280px) {
-    margin-bottom: 62px;
-  }*/
 }
 
 .products__card-subtitle {
@@ -2045,23 +2039,14 @@ img {
   text-align: center;
   letter-spacing: 0.04em;
   margin: 0 auto;
-  color: #fff;
   margin-bottom: 30px;
-}
-
-@media screen and (max-width: 767px) {
-  .products__card-text {
-    /*padding-left: 40px;
-    padding-right: 40px;*/
-  }
+  color: #fff;
 }
 
 @media screen and (min-width: 768px) {
   .products__card-text {
     line-height: 1.76;
     margin-bottom: 40px;
-    /*padding-left: 11px;
-    padding-right: 11px;*/
   }
 }
 
@@ -2069,13 +2054,14 @@ img {
   .products__card-text {
     font-size: 16px;
     margin-bottom: 62px;
-    /*padding-left: 44px;
-    padding-right: 44px;*/
   }
 }
 
 .products__card-button {
   border-radius: 50%;
+  -webkit-transition: opacity 250ms linear;
+  transition: opacity 250ms linear;
+  padding-bottom: 50px;
 }
 
 @media screen and (max-width: 767px) {
@@ -2105,6 +2091,122 @@ img {
   background-image: url(../images/arrow-right@1x.png);
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.products__card-button:hover {
+  border: 2px solid yellow;
+  -webkit-box-shadow: rgba(255, 184, 202, 0.2);
+          box-shadow: rgba(255, 184, 202, 0.2);
+}
+
+/**/
+.products__card-text--two {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.52;
+  text-align: center;
+  letter-spacing: 0.04em;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .products__card-text--two {
+    line-height: 1.76;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .products__card-text--two {
+    font-size: 16px;
+    margin-bottom: 52px;
+  }
+}
+
+.modal-one {
+  background-color: #ffb8ca;
+}
+
+.modal-two {
+  background-color: #f0d1a5;
+}
+
+.modal-three {
+  background-color: #c2e297;
+}
+
+.backdrop.backdrop__is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal__title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: black;
+}
+
+/*new modal*/
+.overlay {
+  position: fixed;
+  top: 25%;
+  left: 0;
+  width: 100%;
+  height: 75%;
+  background: rgba(255, 184, 202, 0.2);
+  border-radius: 24px;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 250ms linear;
+  transition: opacity 250ms linear;
+  /*не дає прокручуватися контенту під модальним вікном*/
+  overflow-y: auto;
+}
+
+/* Стилі для модального вікна*/
+.modalpro {
+  position: absolute;
+  max-width: 450px;
+  width: 100%;
+  padding: 0 16px;
+  top: 50%;
+  left: 50%;
+  border-radius: 24px;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  -webkit-transition: -webkit-transform 250ms linear;
+  transition: -webkit-transform 250ms linear;
+  transition: transform 250ms linear;
+  transition: transform 250ms linear, -webkit-transform 250ms linear;
+}
+
+@media screen and (min-width: 768px) {
+  .modalpro {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modalpro {
+    min-height: 424px;
+  }
+}
+
+/* Стилі для активних класів підложки та вікна*/
+.modalpro.active,
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .about {
