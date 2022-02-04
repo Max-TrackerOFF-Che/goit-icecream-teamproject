@@ -2105,7 +2105,7 @@ img {
           transform: rotate(-90deg);
 }
 
-.products__button-closed:hover::after, .products__card-button:focus::after {
+.products__button-closed:hover::after, .products__button-closed:focus::after {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
@@ -2153,7 +2153,7 @@ img {
 }
 
 /*new modal*/
-/*.overlay {
+.overlay {
   position: fixed;
   top: 25%;
   left: 0;
@@ -2161,28 +2161,29 @@ img {
   height: 75%;
   background: rgba(255, 184, 202, 0.2);
   border-radius: 24px;
-
-  z-index: 1;
+  /*z-index: 1;*/
   opacity: 0;
   visibility: hidden;
-  transition: opacity 250ms linear;*/
-/*не дає прокручуватися контенту під модальним вікном*/
-/*overflow-y: auto;
-}*/
+  -webkit-transition: opacity 250ms linear;
+  transition: opacity 250ms linear;
+  /*не дає прокручуватися контенту під модальним вікном*/
+  overflow-y: auto;
+}
+
 /* Стилі для модального вікна*/
 .modalpro {
   position: absolute;
   max-width: 450px;
   width: 100%;
   padding: 0 16px;
-  top: 100%;
+  top: 50%;
   left: 0;
   border-radius: 24px;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   opacity: 0;
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   -webkit-transition: -webkit-transform 250ms linear;
   transition: -webkit-transform 250ms linear;
   transition: transform 250ms linear;
@@ -2196,11 +2197,9 @@ img {
     }*/
 }
 
-.modalpro:hover .products__card-button {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-}
-
+/*.products__card-button:hover  {
+  transform: translateY(-100%);
+}*/
 /* Стилі для активних класів підложки та вікна*/
 .modalpro.active,
 .overlay.active {
