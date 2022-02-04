@@ -345,7 +345,21 @@
     margin-bottom: 62px;
   }
 }
-.products__card-button {
+/*style button open/closed*/
+
+.products__card-button::after, .products__button-closed::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-image: url(../images/arrow-right@1x.png);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  transition: transform 250ms linear;
+}
+.products__card-button, .products__button-closed {
   padding-bottom: 50px;
   border-radius: 50%;
 
@@ -361,17 +375,12 @@
   @media screen and (min-width: 1280px) {
     padding-bottom: 50px;
   }
- 
-  &::after {
-    content: '';
-    display: block;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-image: url(../images/arrow-right@1x.png);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+}
+.products__card-button:hover::after,  .products__card-button:focus::after{
+  transform: rotate(-90deg);
+}
+.products__button-closed:hover::after, .products__card-button:focus::after {
+  transform: rotate(90deg);
 }
 
 /**/
@@ -432,14 +441,14 @@
   max-width: 450px;
   width: 100%;
   padding: 0 16px;
-  top: 50%;
-  left: 50%;
+  top: 100%;
+  left: 0;
   border-radius: 24px;
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   opacity: 0;
 
-  transform: translate(-50%, -50%);
+  transform: translate(0, 0);
   transition: transform 250ms linear;
 
    /* @media screen and (min-width: 768px) {
@@ -450,7 +459,9 @@
       min-height: 424px; 
     }*/
 }
-
+.modalpro:hover .products__card-button {
+  transform: translateY(-100%);
+}
 /* Стилі для активних класів підложки та вікна*/
 .modalpro.active,
 .overlay.active{
